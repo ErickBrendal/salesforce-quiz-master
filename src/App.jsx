@@ -115,6 +115,25 @@ const SalesforceQuizApp = () => {
   };
 
   const t = translations[language];
+
+  const generateQuestionWithAPI = async () => {
+    if (!apiKey) return generateOfflineQuestion();
+    
+    setLoading(true);
+    const certName = certifications[certType][language];
+    const prompt = `Generate a challenging quiz question about Salesforce ${certName} certification. 
+    Return ONLY a JSON object with this structure:
+    {
+      "question": "question text",
+      "options": ["option1", "option2", "option3", "option4"],
+      "correct": 0,
+      "explanation": "detailed explanation"
+    }`;
+
+    try {
+      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${apiKey}`
         },
