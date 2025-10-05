@@ -16,6 +16,8 @@ const SalesforceQuizApp = () => {
   const [loading, setLoading] = useState(false);
   const [lives, setLives] = useState(3);
   const [earnedStars, setEarnedStars] = useState(0);
+  const [usedQuestions, setUsedQuestions] = useState([]);
+  const [maxQuestions] = useState(10); // Limite de perguntas por fase
 
   const certifications = {
     'platform-foundations': { 
@@ -156,6 +158,104 @@ const SalesforceQuizApp = () => {
         explanation: { 
           en: "Text Area (Long) fields can store up to 131,072 characters, making them ideal for storing large amounts of text data.",
           pt: "Campos de Área de Texto (Longa) podem armazenar até 131.072 caracteres, tornando-os ideais para armazenar grandes quantidades de dados de texto."
+        }
+      },
+      {
+        question: { en: "What is a formula field?", pt: "O que é um campo fórmula?" },
+        options: [
+          { en: "A field that automatically calculates values", pt: "Um campo que calcula valores automaticamente" },
+          { en: "A field that stores formulas", pt: "Um campo que armazena fórmulas" },
+          { en: "A field for mathematical operations only", pt: "Um campo apenas para operações matemáticas" },
+          { en: "A field that requires manual calculation", pt: "Um campo que requer cálculo manual" }
+        ],
+        correct: 0,
+        explanation: { 
+          en: "Formula fields automatically calculate values based on other fields, expressions, or values. They are read-only and update automatically when referenced fields change.",
+          pt: "Campos fórmula calculam automaticamente valores baseados em outros campos, expressões ou valores. Eles são somente leitura e atualizam automaticamente quando campos referenciados mudam."
+        }
+      },
+      {
+        question: { en: "What is the difference between a Role and a Profile?", pt: "Qual é a diferença entre uma Função e um Perfil?" },
+        options: [
+          { en: "Roles control record access, Profiles control object permissions", pt: "Funções controlam acesso a registros, Perfis controlam permissões de objetos" },
+          { en: "They are the same thing", pt: "São a mesma coisa" },
+          { en: "Roles control object permissions, Profiles control record access", pt: "Funções controlam permissões de objetos, Perfis controlam acesso a registros" },
+          { en: "Roles are for admins only", pt: "Funções são apenas para administradores" }
+        ],
+        correct: 0,
+        explanation: { 
+          en: "Roles control record-level access through the role hierarchy, while Profiles control object-level permissions and field-level security.",
+          pt: "Funções controlam acesso no nível de registro através da hierarquia de funções, enquanto Perfis controlam permissões no nível de objeto e segurança no nível de campo."
+        }
+      },
+      {
+        question: { en: "What is a validation rule?", pt: "O que é uma regra de validação?" },
+        options: [
+          { en: "A rule that prevents invalid data from being saved", pt: "Uma regra que impede dados inválidos de serem salvos" },
+          { en: "A rule that validates user passwords", pt: "Uma regra que valida senhas de usuário" },
+          { en: "A rule that checks email addresses", pt: "Uma regra que verifica endereços de email" },
+          { en: "A rule that validates API calls", pt: "Uma regra que valida chamadas de API" }
+        ],
+        correct: 0,
+        explanation: { 
+          en: "Validation rules verify that data entered by users meets specified criteria before they can save a record. If the validation fails, an error message is displayed.",
+          pt: "Regras de validação verificam se os dados inseridos pelos usuários atendem aos critérios especificados antes que possam salvar um registro. Se a validação falhar, uma mensagem de erro é exibida."
+        }
+      },
+      {
+        question: { en: "What is a record type?", pt: "O que é um tipo de registro?" },
+        options: [
+          { en: "Different business processes and picklist values for different users", pt: "Diferentes processos de negócio e valores de lista de seleção para diferentes usuários" },
+          { en: "A type of custom object", pt: "Um tipo de objeto personalizado" },
+          { en: "A type of field", pt: "Um tipo de campo" },
+          { en: "A type of report", pt: "Um tipo de relatório" }
+        ],
+        correct: 0,
+        explanation: { 
+          en: "Record Types allow you to offer different business processes, picklist values, and page layouts to different users based on their profile.",
+          pt: "Tipos de Registro permitem oferecer diferentes processos de negócio, valores de lista de seleção e layouts de página para diferentes usuários com base em seu perfil."
+        }
+      },
+      {
+        question: { en: "What is the App Launcher?", pt: "O que é o Iniciador de Aplicativos?" },
+        options: [
+          { en: "A menu to access all apps and items", pt: "Um menu para acessar todos os aplicativos e itens" },
+          { en: "A tool to create new apps", pt: "Uma ferramenta para criar novos aplicativos" },
+          { en: "A mobile application", pt: "Um aplicativo móvel" },
+          { en: "A development tool", pt: "Uma ferramenta de desenvolvimento" }
+        ],
+        correct: 0,
+        explanation: { 
+          en: "The App Launcher provides a single location where users can access all their apps and items, including standard apps, custom apps, and connected apps.",
+          pt: "O Iniciador de Aplicativos fornece um local único onde os usuários podem acessar todos os seus aplicativos e itens, incluindo aplicativos padrão, personalizados e conectados."
+        }
+      },
+      {
+        question: { en: "What is Lightning Experience?", pt: "O que é Lightning Experience?" },
+        options: [
+          { en: "The modern Salesforce user interface", pt: "A interface de usuário moderna do Salesforce" },
+          { en: "A mobile app", pt: "Um aplicativo móvel" },
+          { en: "A development framework", pt: "Um framework de desenvolvimento" },
+          { en: "A type of cloud service", pt: "Um tipo de serviço em nuvem" }
+        ],
+        correct: 0,
+        explanation: { 
+          en: "Lightning Experience is Salesforce's modern, intuitive user interface that provides enhanced productivity features, better visualizations, and improved user experience.",
+          pt: "Lightning Experience é a interface de usuário moderna e intuitiva do Salesforce que fornece recursos de produtividade aprimorados, melhores visualizações e experiência de usuário melhorada."
+        }
+      },
+      {
+        question: { en: "What is a page layout?", pt: "O que é um layout de página?" },
+        options: [
+          { en: "Controls the organization and fields visible on a record page", pt: "Controla a organização e campos visíveis em uma página de registro" },
+          { en: "A template for creating pages", pt: "Um modelo para criar páginas" },
+          { en: "A type of custom object", pt: "Um tipo de objeto personalizado" },
+          { en: "A report layout", pt: "Um layout de relatório" }
+        ],
+        correct: 0,
+        explanation: { 
+          en: "Page Layouts control the layout and organization of fields, buttons, and related lists on object record pages. Different layouts can be assigned to different profiles.",
+          pt: "Layouts de Página controlam o layout e organização de campos, botões e listas relacionadas nas páginas de registro de objetos. Diferentes layouts podem ser atribuídos a diferentes perfis."
         }
       }
     ],
@@ -330,13 +430,38 @@ const SalesforceQuizApp = () => {
 
   const generateOfflineQuestion = () => {
     const questions = offlineQuestions[certType] || offlineQuestions['platform-foundations'];
-    const randomQ = questions[Math.floor(Math.random() * questions.length)];
+    
+    // Filtrar perguntas que ainda não foram usadas
+    const availableQuestions = questions.filter((_, index) => !usedQuestions.includes(index));
+    
+    // Se todas as perguntas foram usadas, resetar
+    if (availableQuestions.length === 0) {
+      setUsedQuestions([]);
+      const randomIndex = Math.floor(Math.random() * questions.length);
+      const randomQ = questions[randomIndex];
+      setUsedQuestions([randomIndex]);
+      
+      return {
+        question: randomQ.question[language],
+        options: randomQ.options.map(opt => opt[language]),
+        correct: randomQ.correct,
+        explanation: randomQ.explanation[language]
+      };
+    }
+    
+    // Selecionar uma pergunta aleatória das disponíveis
+    const randomAvailableIndex = Math.floor(Math.random() * availableQuestions.length);
+    const selectedQuestion = availableQuestions[randomAvailableIndex];
+    const originalIndex = questions.indexOf(selectedQuestion);
+    
+    // Marcar como usada
+    setUsedQuestions(prev => [...prev, originalIndex]);
     
     return {
-      question: randomQ.question[language],
-      options: randomQ.options.map(opt => opt[language]),
-      correct: randomQ.correct,
-      explanation: randomQ.explanation[language]
+      question: selectedQuestion.question[language],
+      options: selectedQuestion.options.map(opt => opt[language]),
+      correct: selectedQuestion.correct,
+      explanation: selectedQuestion.explanation[language]
     };
   };
 
@@ -348,10 +473,17 @@ const SalesforceQuizApp = () => {
     setStreak(0);
     setLives(3);
     setEarnedStars(0);
+    setUsedQuestions([]); // Resetar perguntas usadas
     loadNextQuestion();
   };
 
   const loadNextQuestion = async () => {
+    // Verificar se atingiu o limite de perguntas
+    if (questionCount >= maxQuestions) {
+      setTimeout(() => setScreen('gameover'), 1000);
+      return;
+    }
+    
     setSelectedAnswer(null);
     setShowResult(false);
     const question = await generateQuestionWithAPI();
