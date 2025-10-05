@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Trophy, Zap, CheckCircle, XCircle, Star, Rocket, Target, Award, Globe, BookOpen, Heart } from 'lucide-react';
+import { Trophy, Zap, CheckCircle, XCircle, Star, Rocket, Target, Award, Globe, BookOpen, Heart, Home } from 'lucide-react';
 import './App.css';
+import { offlineQuestions } from './questions';
 
 const SalesforceQuizApp = () => {
   const [screen, setScreen] = useState('setup');
@@ -114,292 +115,6 @@ const SalesforceQuizApp = () => {
   };
 
   const t = translations[language];
-
-  // Banco de perguntas offline (fallback)
-  const offlineQuestions = {
-    'platform-foundations': [
-      {
-        question: { en: "What is a Salesforce Object?", pt: "O que é um Objeto Salesforce?" },
-        options: [
-          { en: "A database table", pt: "Uma tabela de banco de dados" },
-          { en: "A user interface", pt: "Uma interface de usuário" },
-          { en: "A programming language", pt: "Uma linguagem de programação" },
-          { en: "A security protocol", pt: "Um protocolo de segurança" }
-        ],
-        correct: 0,
-        explanation: { 
-          en: "A Salesforce Object is essentially a database table that stores specific types of information. Standard objects like Account and Contact are pre-built, while custom objects can be created for unique business needs.",
-          pt: "Um Objeto Salesforce é essencialmente uma tabela de banco de dados que armazena tipos específicos de informação. Objetos padrão como Conta e Contato são pré-construídos, enquanto objetos personalizados podem ser criados para necessidades específicas de negócio."
-        }
-      },
-      {
-        question: { en: "What type of relationship allows multiple child records to be associated with multiple parent records?", pt: "Que tipo de relacionamento permite que múltiplos registros filhos sejam associados a múltiplos registros pais?" },
-        options: [
-          { en: "Master-Detail", pt: "Mestre-Detalhe" },
-          { en: "Lookup", pt: "Pesquisa" },
-          { en: "Many-to-Many", pt: "Muitos-para-Muitos" },
-          { en: "Hierarchical", pt: "Hierárquico" }
-        ],
-        correct: 2,
-        explanation: { 
-          en: "Many-to-Many relationships are created using junction objects. This allows multiple records from one object to relate to multiple records from another object.",
-          pt: "Relacionamentos Muitos-para-Muitos são criados usando objetos de junção. Isso permite que múltiplos registros de um objeto se relacionem com múltiplos registros de outro objeto."
-        }
-      },
-      {
-        question: { en: "Which field type can contain up to 131,072 characters?", pt: "Qual tipo de campo pode conter até 131.072 caracteres?" },
-        options: [
-          { en: "Text", pt: "Texto" },
-          { en: "Text Area (Long)", pt: "Área de Texto (Longa)" },
-          { en: "Rich Text Area", pt: "Área de Texto Rico" },
-          { en: "Text Area", pt: "Área de Texto" }
-        ],
-        correct: 1,
-        explanation: { 
-          en: "Text Area (Long) fields can store up to 131,072 characters, making them ideal for storing large amounts of text data.",
-          pt: "Campos de Área de Texto (Longa) podem armazenar até 131.072 caracteres, tornando-os ideais para armazenar grandes quantidades de dados de texto."
-        }
-      },
-      {
-        question: { en: "What is a formula field?", pt: "O que é um campo fórmula?" },
-        options: [
-          { en: "A field that automatically calculates values", pt: "Um campo que calcula valores automaticamente" },
-          { en: "A field that stores formulas", pt: "Um campo que armazena fórmulas" },
-          { en: "A field for mathematical operations only", pt: "Um campo apenas para operações matemáticas" },
-          { en: "A field that requires manual calculation", pt: "Um campo que requer cálculo manual" }
-        ],
-        correct: 0,
-        explanation: { 
-          en: "Formula fields automatically calculate values based on other fields, expressions, or values. They are read-only and update automatically when referenced fields change.",
-          pt: "Campos fórmula calculam automaticamente valores baseados em outros campos, expressões ou valores. Eles são somente leitura e atualizam automaticamente quando campos referenciados mudam."
-        }
-      },
-      {
-        question: { en: "What is the difference between a Role and a Profile?", pt: "Qual é a diferença entre uma Função e um Perfil?" },
-        options: [
-          { en: "Roles control record access, Profiles control object permissions", pt: "Funções controlam acesso a registros, Perfis controlam permissões de objetos" },
-          { en: "They are the same thing", pt: "São a mesma coisa" },
-          { en: "Roles control object permissions, Profiles control record access", pt: "Funções controlam permissões de objetos, Perfis controlam acesso a registros" },
-          { en: "Roles are for admins only", pt: "Funções são apenas para administradores" }
-        ],
-        correct: 0,
-        explanation: { 
-          en: "Roles control record-level access through the role hierarchy, while Profiles control object-level permissions and field-level security.",
-          pt: "Funções controlam acesso no nível de registro através da hierarquia de funções, enquanto Perfis controlam permissões no nível de objeto e segurança no nível de campo."
-        }
-      },
-      {
-        question: { en: "What is a validation rule?", pt: "O que é uma regra de validação?" },
-        options: [
-          { en: "A rule that prevents invalid data from being saved", pt: "Uma regra que impede dados inválidos de serem salvos" },
-          { en: "A rule that validates user passwords", pt: "Uma regra que valida senhas de usuário" },
-          { en: "A rule that checks email addresses", pt: "Uma regra que verifica endereços de email" },
-          { en: "A rule that validates API calls", pt: "Uma regra que valida chamadas de API" }
-        ],
-        correct: 0,
-        explanation: { 
-          en: "Validation rules verify that data entered by users meets specified criteria before they can save a record. If the validation fails, an error message is displayed.",
-          pt: "Regras de validação verificam se os dados inseridos pelos usuários atendem aos critérios especificados antes que possam salvar um registro. Se a validação falhar, uma mensagem de erro é exibida."
-        }
-      },
-      {
-        question: { en: "What is a record type?", pt: "O que é um tipo de registro?" },
-        options: [
-          { en: "Different business processes and picklist values for different users", pt: "Diferentes processos de negócio e valores de lista de seleção para diferentes usuários" },
-          { en: "A type of custom object", pt: "Um tipo de objeto personalizado" },
-          { en: "A type of field", pt: "Um tipo de campo" },
-          { en: "A type of report", pt: "Um tipo de relatório" }
-        ],
-        correct: 0,
-        explanation: { 
-          en: "Record Types allow you to offer different business processes, picklist values, and page layouts to different users based on their profile.",
-          pt: "Tipos de Registro permitem oferecer diferentes processos de negócio, valores de lista de seleção e layouts de página para diferentes usuários com base em seu perfil."
-        }
-      },
-      {
-        question: { en: "What is the App Launcher?", pt: "O que é o Iniciador de Aplicativos?" },
-        options: [
-          { en: "A menu to access all apps and items", pt: "Um menu para acessar todos os aplicativos e itens" },
-          { en: "A tool to create new apps", pt: "Uma ferramenta para criar novos aplicativos" },
-          { en: "A mobile application", pt: "Um aplicativo móvel" },
-          { en: "A development tool", pt: "Uma ferramenta de desenvolvimento" }
-        ],
-        correct: 0,
-        explanation: { 
-          en: "The App Launcher provides a single location where users can access all their apps and items, including standard apps, custom apps, and connected apps.",
-          pt: "O Iniciador de Aplicativos fornece um local único onde os usuários podem acessar todos os seus aplicativos e itens, incluindo aplicativos padrão, personalizados e conectados."
-        }
-      },
-      {
-        question: { en: "What is Lightning Experience?", pt: "O que é Lightning Experience?" },
-        options: [
-          { en: "The modern Salesforce user interface", pt: "A interface de usuário moderna do Salesforce" },
-          { en: "A mobile app", pt: "Um aplicativo móvel" },
-          { en: "A development framework", pt: "Um framework de desenvolvimento" },
-          { en: "A type of cloud service", pt: "Um tipo de serviço em nuvem" }
-        ],
-        correct: 0,
-        explanation: { 
-          en: "Lightning Experience is Salesforce's modern, intuitive user interface that provides enhanced productivity features, better visualizations, and improved user experience.",
-          pt: "Lightning Experience é a interface de usuário moderna e intuitiva do Salesforce que fornece recursos de produtividade aprimorados, melhores visualizações e experiência de usuário melhorada."
-        }
-      },
-      {
-        question: { en: "What is a page layout?", pt: "O que é um layout de página?" },
-        options: [
-          { en: "Controls the organization and fields visible on a record page", pt: "Controla a organização e campos visíveis em uma página de registro" },
-          { en: "A template for creating pages", pt: "Um modelo para criar páginas" },
-          { en: "A type of custom object", pt: "Um tipo de objeto personalizado" },
-          { en: "A report layout", pt: "Um layout de relatório" }
-        ],
-        correct: 0,
-        explanation: { 
-          en: "Page Layouts control the layout and organization of fields, buttons, and related lists on object record pages. Different layouts can be assigned to different profiles.",
-          pt: "Layouts de Página controlam o layout e organização de campos, botões e listas relacionadas nas páginas de registro de objetos. Diferentes layouts podem ser atribuídos a diferentes perfis."
-        }
-      }
-    ],
-    'admin-sales': [
-      {
-        question: { en: "What is the maximum number of active assignment rules per object?", pt: "Qual é o número máximo de regras de atribuição ativas por objeto?" },
-        options: [
-          { en: "1", pt: "1" },
-          { en: "5", pt: "5" },
-          { en: "10", pt: "10" },
-          { en: "Unlimited", pt: "Ilimitado" }
-        ],
-        correct: 0,
-        explanation: { 
-          en: "Only ONE assignment rule can be active per object at a time. However, that rule can contain multiple rule entries to handle different scenarios.",
-          pt: "Apenas UMA regra de atribuição pode estar ativa por objeto por vez. No entanto, essa regra pode conter múltiplas entradas de regra para lidar com diferentes cenários."
-        }
-      },
-      {
-        question: { en: "Which feature allows you to automatically assign records to users or queues?", pt: "Qual recurso permite atribuir automaticamente registros a usuários ou filas?" },
-        options: [
-          { en: "Workflow Rules", pt: "Regras de Fluxo de Trabalho" },
-          { en: "Assignment Rules", pt: "Regras de Atribuição" },
-          { en: "Validation Rules", pt: "Regras de Validação" },
-          { en: "Process Builder", pt: "Process Builder" }
-        ],
-        correct: 1,
-        explanation: { 
-          en: "Assignment Rules automatically assign records to users or queues based on criteria you define. They are available for Leads and Cases.",
-          pt: "Regras de Atribuição atribuem automaticamente registros a usuários ou filas com base em critérios que você define. Elas estão disponíveis para Leads e Casos."
-        }
-      }
-    ],
-    'sales': [
-      {
-        question: { en: "What is the purpose of a Sales Process?", pt: "Qual é o propósito de um Processo de Vendas?" },
-        options: [
-          { en: "Control which opportunity stages are available", pt: "Controlar quais estágios de oportunidade estão disponíveis" },
-          { en: "Automate email sending", pt: "Automatizar envio de emails" },
-          { en: "Generate reports", pt: "Gerar relatórios" },
-          { en: "Manage user permissions", pt: "Gerenciar permissões de usuário" }
-        ],
-        correct: 0,
-        explanation: { 
-          en: "Sales Processes define which opportunity stages are available to different sales teams based on their record types, helping standardize and optimize the sales workflow.",
-          pt: "Processos de Vendas definem quais estágios de oportunidade estão disponíveis para diferentes equipes de vendas baseado em seus tipos de registro, ajudando a padronizar e otimizar o fluxo de trabalho de vendas."
-        }
-      },
-      {
-        question: { en: "What is the relationship between Accounts and Opportunities?", pt: "Qual é o relacionamento entre Contas e Oportunidades?" },
-        options: [
-          { en: "Master-Detail", pt: "Mestre-Detalhe" },
-          { en: "Lookup", pt: "Pesquisa" },
-          { en: "Many-to-Many", pt: "Muitos-para-Muitos" },
-          { en: "Hierarchical", pt: "Hierárquico" }
-        ],
-        correct: 1,
-        explanation: { 
-          en: "Accounts and Opportunities have a Lookup relationship, allowing multiple opportunities to be associated with a single account.",
-          pt: "Contas e Oportunidades têm um relacionamento de Pesquisa, permitindo que múltiplas oportunidades sejam associadas a uma única conta."
-        }
-      }
-    ],
-    'marketing': [
-      {
-        question: { en: "What is a Journey in Marketing Cloud?", pt: "O que é uma Jornada no Marketing Cloud?" },
-        options: [
-          { en: "An automated customer engagement path", pt: "Um caminho automatizado de engajamento do cliente" },
-          { en: "A type of email template", pt: "Um tipo de template de email" },
-          { en: "A reporting dashboard", pt: "Um painel de relatórios" },
-          { en: "A data extension", pt: "Uma extensão de dados" }
-        ],
-        correct: 0,
-        explanation: { 
-          en: "Journey Builder creates automated, multi-step customer engagement paths that respond to customer behavior and preferences.",
-          pt: "Journey Builder cria caminhos automatizados de engajamento do cliente em múltiplas etapas que respondem ao comportamento e preferências do cliente."
-        }
-      }
-    ],
-    'agentforce': [
-      {
-        question: { en: "What is Agentforce primarily used for?", pt: "Para que o Agentforce é usado principalmente?" },
-        options: [
-          { en: "AI-powered autonomous agents", pt: "Agentes autônomos com IA" },
-          { en: "Data backup", pt: "Backup de dados" },
-          { en: "Email marketing", pt: "Marketing por email" },
-          { en: "Report generation", pt: "Geração de relatórios" }
-        ],
-        correct: 0,
-        explanation: { 
-          en: "Agentforce enables AI-powered autonomous agents that can handle tasks, make decisions, and take actions on behalf of users.",
-          pt: "Agentforce habilita agentes autônomos com IA que podem lidar com tarefas, tomar decisões e executar ações em nome dos usuários."
-        }
-      }
-    ],
-    'data-cloud': [
-      {
-        question: { en: "What is the primary purpose of Data Cloud?", pt: "Qual é o propósito principal do Data Cloud?" },
-        options: [
-          { en: "Unify customer data from multiple sources", pt: "Unificar dados de clientes de múltiplas fontes" },
-          { en: "Store email templates", pt: "Armazenar templates de email" },
-          { en: "Manage user permissions", pt: "Gerenciar permissões de usuário" },
-          { en: "Create reports", pt: "Criar relatórios" }
-        ],
-        correct: 0,
-        explanation: { 
-          en: "Data Cloud unifies customer data from multiple sources into a single, comprehensive view, enabling better insights and personalization.",
-          pt: "Data Cloud unifica dados de clientes de múltiplas fontes em uma única visão abrangente, permitindo melhores insights e personalização."
-        }
-      }
-    ],
-    'business-analyst': [
-      {
-        question: { en: "What is a key responsibility of a Salesforce Business Analyst?", pt: "Qual é uma responsabilidade chave de um Analista de Negócios Salesforce?" },
-        options: [
-          { en: "Gathering and documenting requirements", pt: "Coletar e documentar requisitos" },
-          { en: "Writing Apex code", pt: "Escrever código Apex" },
-          { en: "Managing servers", pt: "Gerenciar servidores" },
-          { en: "Designing databases", pt: "Projetar bancos de dados" }
-        ],
-        correct: 0,
-        explanation: { 
-          en: "Business Analysts focus on understanding business needs, gathering requirements, and translating them into Salesforce solutions.",
-          pt: "Analistas de Negócios focam em entender necessidades de negócio, coletar requisitos e traduzi-los em soluções Salesforce."
-        }
-      }
-    ]
-  };
-
-  const generateQuestionWithAPI = async () => {
-    if (!apiKey || apiKey.length < 20) {
-      return generateOfflineQuestion();
-    }
-
-    setLoading(true);
-    try {
-      const certName = certifications[certType][language];
-      const prompt = language === 'pt' 
-        ? `Gere uma pergunta de múltipla escolha sobre Salesforce ${certName}. Formate como JSON com: question (string), options (array de 4 strings), correct (índice da resposta correta 0-3), explanation (explicação detalhada da resposta correta). A pergunta deve ser atualizada e relevante para 2025.`
-        : `Generate a multiple choice question about Salesforce ${certName}. Format as JSON with: question (string), options (array of 4 strings), correct (correct answer index 0-3), explanation (detailed explanation of correct answer). The question should be updated and relevant for 2025.`;
-
-      const response = await fetch('https://api.openai.com/v1/chat/completions', {
-        method: 'POST',
-        headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${apiKey}`
         },
@@ -431,15 +146,15 @@ const SalesforceQuizApp = () => {
   const generateOfflineQuestion = () => {
     const questions = offlineQuestions[certType] || offlineQuestions['platform-foundations'];
     
-    // Filtrar perguntas que ainda não foram usadas
-    const availableQuestions = questions.filter((_, index) => !usedQuestions.includes(index));
+    // Filtrar perguntas que ainda não foram usadas (usando IDs únicos)
+    const availableQuestions = questions.filter(q => !usedQuestions.includes(q.id));
     
     // Se todas as perguntas foram usadas, resetar
     if (availableQuestions.length === 0) {
       setUsedQuestions([]);
       const randomIndex = Math.floor(Math.random() * questions.length);
       const randomQ = questions[randomIndex];
-      setUsedQuestions([randomIndex]);
+      setUsedQuestions([randomQ.id]);
       
       return {
         question: randomQ.question[language],
@@ -452,10 +167,9 @@ const SalesforceQuizApp = () => {
     // Selecionar uma pergunta aleatória das disponíveis
     const randomAvailableIndex = Math.floor(Math.random() * availableQuestions.length);
     const selectedQuestion = availableQuestions[randomAvailableIndex];
-    const originalIndex = questions.indexOf(selectedQuestion);
     
-    // Marcar como usada
-    setUsedQuestions(prev => [...prev, originalIndex]);
+    // Marcar como usada usando ID único
+    setUsedQuestions(prev => [...prev, selectedQuestion.id]);
     
     return {
       question: selectedQuestion.question[language],
@@ -635,6 +349,30 @@ const SalesforceQuizApp = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 p-4">
         <div className="max-w-4xl mx-auto">
+          {/* Botão Voltar ao Início */}
+          <div className="mb-6 flex justify-end">
+            <button
+              onClick={() => {
+                if (window.confirm(language === 'pt' ? 'Deseja realmente sair do quiz? Seu progresso será perdido.' : 'Do you really want to quit the quiz? Your progress will be lost.')) {
+                  setScreen('setup');
+                  setScore(0);
+                  setQuestionCount(0);
+                  setStreak(0);
+                  setLives(3);
+                  setEarnedStars(0);
+                  setUsedQuestions([]);
+                  setCurrentQuestion(null);
+                  setSelectedAnswer(null);
+                  setShowResult(false);
+                }
+              }}
+              className="flex items-center gap-2 px-6 py-3 bg-white/20 hover:bg-white/30 text-white rounded-xl font-bold transition-all transform hover:scale-105 backdrop-blur-lg border border-white/30 shadow-lg"
+            >
+              <Home className="w-5 h-5" />
+              {t.backToSetup}
+            </button>
+          </div>
+          
           {/* Stats Bar */}
           <div className="grid grid-cols-3 gap-4 mb-8">
             <div className="bg-gradient-to-r from-yellow-500 to-orange-600 rounded-2xl p-6 text-center shadow-xl">
