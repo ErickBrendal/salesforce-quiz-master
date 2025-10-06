@@ -18,7 +18,7 @@ const SalesforceQuizApp = () => {
   const [lives, setLives] = useState(3);
   const [earnedStars, setEarnedStars] = useState(0);
   const [usedQuestions, setUsedQuestions] = useState([]);
-  const [maxQuestions] = useState(10); // Limite de perguntas por fase
+  const [maxQuestions] = useState(20); // Limite de perguntas por fase
 
   const certifications = {
     'platform-foundations': { 
@@ -177,32 +177,43 @@ const SalesforceQuizApp = () => {
     // Filtrar perguntas que ainda não foram usadas (usando IDs únicos)
     const availableQuestions = questions.filter(q => !usedQuestions.includes(q.id));
     
+    let selectedQuestion;
+    
     // Se todas as perguntas foram usadas, resetar
     if (availableQuestions.length === 0) {
       setUsedQuestions([]);
       const randomIndex = Math.floor(Math.random() * questions.length);
-      const randomQ = questions[randomIndex];
-      setUsedQuestions([randomQ.id]);
+      selectedQuestion = questions[randomIndex];
+      setUsedQuestions([selectedQuestion.id]);
+    } else {
+      // Selecionar uma pergunta aleatória das disponíveis
+      const randomAvailableIndex = Math.floor(Math.random() * availableQuestions.length);
+      selectedQuestion = availableQuestions[randomAvailableIndex];
       
-      return {
-        question: randomQ.question[language],
-        options: randomQ.options.map(opt => opt[language]),
-        correct: randomQ.correct,
-        explanation: randomQ.explanation[language]
-      };
+      // Marcar como usada usando ID único
+      setUsedQuestions(prev => [...prev, selectedQuestion.id]);
     }
     
-    // Selecionar uma pergunta aleatória das disponíveis
-    const randomAvailableIndex = Math.floor(Math.random() * availableQuestions.length);
-    const selectedQuestion = availableQuestions[randomAvailableIndex];
+    // Preparar as opções com randomização
+    const originalOptions = selectedQuestion.options.map(opt => opt[language]);
+    const correctAnswer = originalOptions[selectedQuestion.correct];
     
-    // Marcar como usada usando ID único
-    setUsedQuestions(prev => [...prev, selectedQuestion.id]);
+    // Criar array de opções com índices para rastrear a posição original
+    const optionsWithIndex = originalOptions.map((option, index) => ({
+      text: option,
+      isCorrect: index === selectedQuestion.correct
+    }));
+    
+    // Embaralhar as opções
+    const shuffledOptions = [...optionsWithIndex].sort(() => Math.random() - 0.5);
+    
+    // Encontrar o novo índice da resposta correta
+    const newCorrectIndex = shuffledOptions.findIndex(option => option.isCorrect);
     
     return {
       question: selectedQuestion.question[language],
-      options: selectedQuestion.options.map(opt => opt[language]),
-      correct: selectedQuestion.correct,
+      options: shuffledOptions.map(option => option.text),
+      correct: newCorrectIndex,
       explanation: selectedQuestion.explanation[language]
     };
   };
