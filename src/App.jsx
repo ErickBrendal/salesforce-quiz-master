@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Trophy, Zap, CheckCircle, XCircle, Star, Rocket, Target, Award, Globe, BookOpen, Heart, Home } from 'lucide-react';
+import { Zap, CheckCircle, XCircle, Star, Rocket, Target, Award, Globe, BookOpen, Heart, Home } from 'lucide-react';
 import './App.css';
 import { offlineQuestions } from './questions';
 
@@ -260,9 +260,7 @@ const SalesforceQuizApp = () => {
         <div className="max-w-4xl mx-auto relative z-10">
           {/* Header */}
           <div className="text-center mb-12 pt-8">
-            <div className="flex items-center justify-center mb-4">
-              <Trophy className="w-16 h-16 text-yellow-400 animate-bounce" />
-            </div>
+
             <h1 className="text-6xl font-black text-white mb-3 drop-shadow-2xl">
               {t.title}
             </h1>
