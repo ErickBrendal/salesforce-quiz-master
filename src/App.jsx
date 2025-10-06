@@ -62,6 +62,12 @@ const SalesforceQuizApp = () => {
       pt: 'Business Analyst',
       icon: '📊',
       color: 'from-yellow-500 to-orange-500'
+    },
+    'service-cloud': { 
+      en: 'Service Cloud',
+      pt: 'Service Cloud',
+      icon: '🎧',
+      color: 'from-cyan-500 to-blue-600'
     }
   };
 
@@ -122,6 +128,9 @@ const SalesforceQuizApp = () => {
     setLoading(true);
     const certName = certifications[certType][language];
     const prompt = `Generate a challenging quiz question about Salesforce ${certName} certification. 
+    Ensure all 4 options have similar text length (between 3-8 words). 
+    Incorrect options must be plausible and use real Salesforce technical terms, not invented ones. 
+    The explanation for the correct answer must be at least 3 detailed sentences, confirming why it's correct, adding extra context or practical use cases, and mentioning benefits or related functionalities. 
     Return ONLY a JSON object with this structure:
     {
       "question": "question text",
