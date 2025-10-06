@@ -1,5 +1,6 @@
+'''
 import { useState } from 'react';
-import { Zap, CheckCircle, XCircle, Star, Rocket, Target, Award, Globe, BookOpen, Heart, Home } from 'lucide-react';
+import { Zap, CheckCircle, XCircle, Star, Rocket, Target, Award, Globe, BookOpen, Heart, Home, Trophy } from 'lucide-react';
 import './App.css';
 import { offlineQuestions } from './questions';
 
@@ -127,17 +128,7 @@ const SalesforceQuizApp = () => {
     
     setLoading(true);
     const certName = certifications[certType][language];
-    const prompt = `Generate a challenging quiz question about Salesforce ${certName} certification. 
-    Ensure all 4 options have similar text length (between 3-8 words). 
-    Incorrect options must be plausible and use real Salesforce technical terms, not invented ones. 
-    The explanation for the correct answer must be at least 3 detailed sentences, confirming why it's correct, adding extra context or practical use cases, and mentioning benefits or related functionalities. 
-    Return ONLY a JSON object with this structure:
-    {
-      "question": "question text",
-      "options": ["option1", "option2", "option3", "option4"],
-      "correct": 0,
-      "explanation": "detailed explanation"
-    }`;
+    const prompt = `Generate a challenging quiz question about Salesforce ${certName} certification. \n    Ensure all 4 options have similar text length (between 3-8 words). \n    Incorrect options must be plausible and use real Salesforce technical terms, not invented ones. \n    The explanation for the correct answer must be at least 3 detailed sentences, confirming why it's correct, adding extra context or practical use cases, and mentioning benefits or related functionalities. \n    Return ONLY a JSON object with this structure:\n    {\n      "question": "question text",\n      "options": ["option1", "option2", "option3", "option4"],\n      "correct": 0,\n      "explanation": "detailed explanation"\n    }`;
 
     try {
       const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -297,7 +288,7 @@ const SalesforceQuizApp = () => {
                       : 'bg-white/20 text-white hover:bg-white/30'
                   }`}
                 >
-                  {lang === 'en' ? '🇺🇸 English' : '🇧🇷 Português'}
+                  {lang === 'en' ? '🇺🇸 English' : '🇧🇷 Portugês'}
                 </button>
               ))}
             </div>
@@ -422,85 +413,55 @@ const SalesforceQuizApp = () => {
           {loading ? (
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-12 text-center border border-white/20 shadow-2xl">
               <div className="animate-spin w-16 h-16 border-4 border-white/30 border-t-white rounded-full mx-auto mb-4"></div>
-              <p className="text-white text-2xl font-bold">{t.loading}</p>
+              <p className="text-white text-xl font-semibold">{t.loading}</p>
             </div>
-          ) : currentQuestion && (
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
-              {/* Question Header */}
-              <div className="mb-6">
-                <p className="text-purple-300 text-sm font-bold mb-2">{t.question} {questionCount}</p>
-                <h2 className="text-white text-2xl font-bold leading-relaxed">{currentQuestion.question}</h2>
-              </div>
-
-              {/* Answer Options */}
-              <div className="space-y-4 mb-6">
-                {currentQuestion.options.map((option, index) => {
-                  const isSelected = selectedAnswer === index;
-                  const isCorrect = index === currentQuestion.correct;
-                  const showCorrect = showResult && isCorrect;
-                  const showIncorrect = showResult && isSelected && !isCorrect;
-
-                  return (
+          ) : (
+            currentQuestion && (
+              <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
+                <p className="text-white text-lg mb-4">{t.question} {questionCount}/{maxQuestions}</p>
+                <h2 className="text-white text-3xl font-bold mb-6">{currentQuestion.question}</h2>
+                <div className="grid grid-cols-1 gap-4">
+                  {currentQuestion.options.map((option, index) => (
                     <button
                       key={index}
                       onClick={() => handleAnswer(index)}
-                      disabled={showResult}
-                      className={`w-full p-6 rounded-2xl text-left font-bold text-lg transition-all transform hover:scale-102 ${
-                        showCorrect
-                          ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-xl scale-102'
-                          : showIncorrect
-                          ? 'bg-gradient-to-r from-red-500 to-pink-600 text-white shadow-xl scale-102'
-                          : isSelected
-                          ? 'bg-white/30 text-white'
+                      className={`p-5 rounded-xl text-left font-semibold transition-all transform hover:scale-105 flex items-center gap-3 ${
+                        showResult
+                          ? index === currentQuestion.correct
+                            ? 'bg-green-500 text-white shadow-lg'
+                            : index === selectedAnswer
+                              ? 'bg-red-500 text-white shadow-lg'
+                              : 'bg-white/20 text-white/70'
                           : 'bg-white/20 text-white hover:bg-white/30'
-                      } ${showResult ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+                      }`}
+                      disabled={showResult}
                     >
-                      <div className="flex items-center gap-3">
-                        <span className="flex-shrink-0 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center font-black">
-                          {String.fromCharCode(65 + index)}
-                        </span>
-                        <span className="flex-1">{option}</span>
-                        {showCorrect && <CheckCircle className="w-6 h-6 flex-shrink-0" />}
-                        {showIncorrect && <XCircle className="w-6 h-6 flex-shrink-0" />}
-                      </div>
+                      <span className="w-8 h-8 flex items-center justify-center rounded-full bg-white/30 text-white font-bold text-sm">
+                        {String.fromCharCode(65 + index)}
+                      </span>
+                      <span className="flex-1">{option}</span>
+                      {showResult && index === currentQuestion.correct && <CheckCircle className="w-6 h-6 text-white" />}
+                      {showResult && index === selectedAnswer && index !== currentQuestion.correct && <XCircle className="w-6 h-6 text-white" />}
                     </button>
-                  );
-                })}
-              </div>
-
-              {/* Result Explanation */}
-              {showResult && (
-                <div className={`mt-6 p-6 rounded-2xl ${
-                  selectedAnswer === currentQuestion.correct
-                    ? 'bg-gradient-to-r from-green-500/20 to-emerald-600/20 border-2 border-green-400'
-                    : 'bg-gradient-to-r from-red-500/20 to-pink-600/20 border-2 border-red-400'
-                }`}>
-                  <div className="flex items-center gap-3 mb-3">
-                    {selectedAnswer === currentQuestion.correct ? (
-                      <>
-                        <CheckCircle className="w-8 h-8 text-green-400" />
-                        <h3 className="text-2xl font-black text-green-300">{t.correct}</h3>
-                      </>
-                    ) : (
-                      <>
-                        <XCircle className="w-8 h-8 text-red-400" />
-                        <h3 className="text-2xl font-black text-red-300">{t.incorrect}</h3>
-                      </>
-                    )}
-                  </div>
-                  <div className="bg-black/30 p-4 rounded-xl mb-4">
-                    <p className="text-sm font-semibold text-purple-300 mb-2">{t.explanation}:</p>
-                    <p className="text-white text-lg leading-relaxed">{currentQuestion.explanation}</p>
-                  </div>
-                  <button
-                    onClick={loadNextQuestion}
-                    className="w-full p-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-bold text-xl hover:scale-105 transition-transform shadow-xl"
-                  >
-                    {t.nextQuestion} →
-                  </button>
+                  ))}
                 </div>
-              )}
-            </div>
+                {showResult && (
+                  <div className="mt-8 p-6 bg-white/10 rounded-2xl border border-white/20 shadow-inner">
+                    <h3 className="text-white text-xl font-bold mb-3 flex items-center gap-2">
+                      <BookOpen className="w-6 h-6" />
+                      {t.explanation}
+                    </h3>
+                    <p className="text-white/90 text-lg leading-relaxed">{currentQuestion.explanation}</p>
+                    <button
+                      onClick={loadNextQuestion}
+                      className="mt-6 w-full p-4 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-blue-500/50"
+                    >
+                      {t.nextQuestion}
+                    </button>
+                  </div>
+                )}
+              </div>
+            )
           )}
         </div>
       </div>
@@ -510,29 +471,18 @@ const SalesforceQuizApp = () => {
   // Game Over Screen
   if (screen === 'gameover') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-900 to-red-900 p-4 flex items-center justify-center">
-        <div className="max-w-2xl w-full bg-white/10 backdrop-blur-lg rounded-3xl p-12 text-center border border-white/20 shadow-2xl">
-          <Award className="w-32 h-32 mx-auto mb-6 text-yellow-400 animate-bounce" />
-          <h2 className="text-6xl font-black text-white mb-4">{t.gameOver}</h2>
-          <div className="bg-gradient-to-r from-yellow-500 to-orange-600 rounded-2xl p-8 mb-6">
-            <p className="text-2xl text-white font-bold mb-2">{t.finalScore}</p>
-            <p className="text-7xl font-black text-white">{score}</p>
-          </div>
-          <div className="grid grid-cols-2 gap-4 mb-8">
-            <div className="bg-white/20 rounded-xl p-6">
-              <BookOpen className="w-12 h-12 mx-auto mb-3 text-blue-300" />
-              <p className="text-white/80 mb-1">{t.question}s</p>
-              <p className="text-4xl font-black text-white">{questionCount}</p>
-            </div>
-            <div className="bg-white/20 rounded-xl p-6">
-              <Star className="w-12 h-12 mx-auto mb-3 text-yellow-400" />
-              <p className="text-white/80 mb-1">{t.stars}</p>
-              <p className="text-4xl font-black text-white">{earnedStars}</p>
-            </div>
+      <div className="min-h-screen bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 p-4 flex items-center justify-center">
+        <div className="max-w-md mx-auto text-center bg-white/10 backdrop-blur-lg rounded-3xl p-10 border border-white/20 shadow-2xl">
+          <h2 className="text-white text-5xl font-black mb-4">{t.gameOver}</h2>
+          <p className="text-white text-2xl mb-6">{t.finalScore}: {score}</p>
+          <div className="flex items-center justify-center gap-2 mb-8">
+            {Array.from({ length: earnedStars }).map((_, i) => (
+              <Star key={i} className="w-10 h-10 text-yellow-400 animate-bounce" />
+            ))}
           </div>
           <button
             onClick={() => setScreen('setup')}
-            className="w-full p-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-2xl font-black text-2xl hover:scale-105 transition-transform shadow-xl"
+            className="w-full p-5 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold text-xl transition-all transform hover:scale-105 shadow-lg hover:shadow-blue-500/50"
           >
             {t.backToSetup}
           </button>
@@ -540,6 +490,9 @@ const SalesforceQuizApp = () => {
       </div>
     );
   }
+
+  return null;
 };
 
 export default SalesforceQuizApp;
+'''

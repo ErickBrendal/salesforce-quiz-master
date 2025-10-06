@@ -1,4 +1,3 @@
-// Banco de perguntas expandido para todas as certificações
 export const offlineQuestions = {
   'platform-foundations': [
     {
@@ -30,8 +29,7 @@ export const offlineQuestions = {
         en: "Many-to-Many relationships are crucial for complex data models, enabling flexible connections between records. They are implemented using a junction object, which is a custom object with two Master-Detail relationships to the parent objects. This setup allows a record from one object to be linked to multiple records from another, and vice-versa, providing robust data association.",
         pt: "Relacionamentos Muitos-para-Muitos são cruciais para modelos de dados complexos, permitindo conexões flexíveis entre registros. Eles são implementados usando um objeto de junção, que é um objeto personalizado com dois relacionamentos Mestre-Detalhe para os objetos pai. Essa configuração permite que um registro de um objeto seja vinculado a múltiplos registros de outro, e vice-versa, proporcionando uma associação de dados robusta."
       }
-    },
-    {
+    },\n    {
       id: 'pf-3',
       question: { en: "Which field type stores up to 131,072 characters?", pt: "Qual tipo de campo armazena até 131.072 caracteres?" },
       options: [
@@ -162,1660 +160,523 @@ export const offlineQuestions = {
       ],
       correct: 0,
       explanation: { 
-        en: "Workflow Rules in Salesforce are automation tools that streamline standard internal procedures. They can automatically perform actions such as sending email alerts, updating fields, creating tasks, or sending outbound messages when specific criteria are met. While Flow and Process Builder offer more advanced automation capabilities, Workflow Rules remain effective for simpler, rule-based automations, helping organizations save time and ensure consistent processes.",
-        pt: "Regras de Fluxo de Trabalho no Salesforce são ferramentas de automação que otimizam procedimentos internos padrão. Elas podem realizar ações automaticamente, como enviar alertas por e-mail, atualizar campos, criar tarefas ou enviar mensagens de saída quando critérios específicos são atendidos. Embora o Flow e o Process Builder ofereçam recursos de automação mais avançados, as Regras de Fluxo de Trabalho continuam eficazes para automações mais simples e baseadas em regras, ajudando as organizações a economizar tempo e garantir processos consistentes."
+        en: "Workflow Rules in Salesforce are automation tools that streamline standard internal procedures. They can automatically perform actions such as sending email alerts, updating fields, creating tasks, or sending outbound messages when specific criteria are met. While Flow and Process Builder offer more advanced automation capabilities, Workflow Rules remain a simple and effective solution for straightforward automation needs.",
+        pt: "Regras de Fluxo de Trabalho no Salesforce são ferramentas de automação que otimizam procedimentos internos padrão. Elas podem realizar ações automaticamente, como enviar alertas de e-mail, atualizar campos, criar tarefas ou enviar mensagens de saída quando critérios específicos são atendidos. Embora o Flow e o Process Builder ofereçam recursos de automação mais avançados, as Regras de Fluxo de Trabalho continuam sendo uma solução simples e eficaz para necessidades de automação diretas."
       }
     },
     {
       id: 'pf-12',
-      question: { en: "What is a custom field?", pt: "O que é um campo personalizado?" },
+      question: { en: "What is the purpose of the Data Loader?", pt: "Qual o propósito do Data Loader?" },
       options: [
-        { en: "Stores unique organizational data", pt: "Armazena dados organizacionais exclusivos" },
-        { en: "A standard Salesforce platform field", pt: "Um campo padrão da plataforma Salesforce" },
-        { en: "Used only for system configurations", pt: "Usado apenas para configurações do sistema" },
-        { en: "A field with fixed, unchangeable properties", pt: "Um campo com propriedades fixas e imutáveis" }
+        { en: "Bulk import/export of data records", pt: "Importação/exportação em massa de registros de dados" },
+        { en: "Real-time data synchronization", pt: "Sincronização de dados em tempo real" },
+        { en: "Custom data visualization tool", pt: "Ferramenta de visualização de dados personalizada" },
+        { en: "Automated data backup service", pt: "Serviço de backup de dados automatizado" }
       ],
       correct: 0,
       explanation: { 
-        en: "A custom field in Salesforce is created by an administrator to store information specific to an organization's unique business requirements. Unlike standard fields that come pre-built, custom fields allow for tailored data capture on both standard and custom objects. This flexibility is vital for extending the Salesforce data model to perfectly align with specific business processes, ensuring that all relevant information can be tracked and reported effectively.",
-        pt: "Um campo personalizado no Salesforce é criado por um administrador para armazenar informações específicas dos requisitos de negócios exclusivos de uma organização. Ao contrário dos campos padrão que vêm pré-construídos, os campos personalizados permitem a captura de dados sob medida em objetos padrão e personalizados. Essa flexibilidade é vital para estender o modelo de dados do Salesforce para se alinhar perfeitamente com processos de negócios específicos, garantindo que todas as informações relevantes possam ser rastreadas e relatadas de forma eficaz."
+        en: "The Data Loader is a powerful client application for the bulk import or export of data. It allows you to insert, update, delete, or export Salesforce records in large quantities, making it an essential tool for data migration and management. Unlike the Data Import Wizard, it supports all objects and can handle millions of records, providing robust functionality for complex data operations.",
+        pt: "O Data Loader é um aplicativo cliente poderoso para a importação ou exportação em massa de dados. Ele permite inserir, atualizar, excluir ou exportar registros do Salesforce em grandes quantidades, tornando-se uma ferramenta essencial para migração e gerenciamento de dados. Diferente do Assistente de Importação de Dados, ele suporta todos os objetos e pode lidar com milhões de registros, fornecendo funcionalidade robusta para operações de dados complexas."
       }
     },
     {
       id: 'pf-13',
-      question: { en: "What is a sharing rule?", pt: "O que é uma regra de compartilhamento?" },
+      question: { en: "What is a dashboard in Salesforce?", pt: "O que é um painel no Salesforce?" },
       options: [
-        { en: "Extends record access beyond hierarchy", pt: "Estende acesso a registros além da hierarquia" },
-        { en: "Manages file sharing permissions", pt: "Gerencia permissões de compartilhamento de arquivos" },
-        { en: "Controls social media content visibility", pt: "Controla visibilidade de conteúdo de mídia social" },
-        { en: "Defines report subscription settings", pt: "Define configurações de assinatura de relatório" }
+        { en: "A visual display of key metrics and trends", pt: "Uma exibição visual de métricas e tendências chave" },
+        { en: "A collection of related data records", pt: "Uma coleção de registros de dados relacionados" },
+        { en: "A custom user interface page layout", pt: "Um layout de página de interface de usuário personalizado" },
+        { en: "A tool for managing user permissions", pt: "Uma ferramenta para gerenciar permissões de usuário" }
       ],
       correct: 0,
       explanation: { 
-        en: "Sharing Rules in Salesforce are used to grant additional record access to users or groups beyond what is provided by organization-wide defaults and the role hierarchy. These rules can be based on record ownership or specific criteria, allowing for flexible and granular control over data visibility. They are crucial for ensuring that the right users have access to the necessary information, fostering collaboration while maintaining data security and compliance within the organization.",
-        pt: "Regras de Compartilhamento no Salesforce são usadas para conceder acesso adicional a registros a usuários ou grupos além do que é fornecido pelos padrões de toda a organização e pela hierarquia de funções. Essas regras podem ser baseadas na propriedade do registro ou em critérios específicos, permitindo um controle flexível e granular sobre a visibilidade dos dados. Elas são cruciais para garantir que os usuários certos tenham acesso às informações necessárias, promovendo a colaboração e mantendo a segurança e conformidade dos dados dentro da organização."
+        en: "A Salesforce Dashboard is a visual representation of key metrics and trends for your organization. Dashboards are composed of components, which are charts, tables, or metrics that display data from source reports. They provide a high-level overview of business performance at a glance, enabling quick decision-making and real-time monitoring of important data.",
+        pt: "Um Painel do Salesforce é uma representação visual de métricas e tendências chave para sua organização. Os painéis são compostos por componentes, que são gráficos, tabelas ou métricas que exibem dados de relatórios de origem. Eles fornecem uma visão geral de alto nível do desempenho dos negócios, permitindo a tomada de decisões rápidas e o monitoramento em tempo real de dados importantes."
       }
     },
     {
       id: 'pf-14',
-      question: { en: "What is a report in Salesforce?", pt: "O que é um relatório no Salesforce?" },
+      question: { en: "What is the primary function of a report?", pt: "Qual a função primária de um relatório?" },
       options: [
-        { en: "A list of records based on criteria", pt: "Uma lista de registros baseada em critérios" },
-        { en: "A static document for data storage", pt: "Um documento estático para armazenamento de dados" },
-        { en: "A visual dashboard component", pt: "Um componente visual de painel" },
-        { en: "A user profile activity log", pt: "Um registro de atividade de perfil de usuário" }
+        { en: "To display a set of records that meet criteria", pt: "Exibir um conjunto de registros que atendem a critérios" },
+        { en: "To automate complex business processes", pt: "Automatizar processos de negócios complexos" },
+        { en: "To create custom user interface pages", pt: "Criar páginas de interface de usuário personalizadas" },
+        { en: "To manage data sharing and security", pt: "Gerenciar compartilhamento e segurança de dados" }
       ],
       correct: 0,
       explanation: { 
-        en: "A report in Salesforce is a powerful tool for analyzing data, presenting a list of records that meet specific criteria defined by the user. These reports can be customized and displayed in various formats, such as tabular, summary, matrix, or joined reports, to provide different perspectives on the data. They are fundamental for business intelligence, helping users gain insights, track performance, and make informed decisions based on their Salesforce data.",
-        pt: "Um relatório no Salesforce é uma ferramenta poderosa para analisar dados, apresentando uma lista de registros que atendem a critérios específicos definidos pelo usuário. Esses relatórios podem ser personalizados e exibidos em vários formatos, como relatórios tabulares, de resumo, de matriz ou unidos, para fornecer diferentes perspectivas sobre os dados. Eles são fundamentais para a inteligência de negócios, ajudando os usuários a obter insights, acompanhar o desempenho e tomar decisões informadas com base em seus dados do Salesforce."
+        en: "A report in Salesforce is a list of records that meet the criteria you define. It’s displayed in rows and columns, and can be filtered, grouped, or displayed in a graphical chart. Reports are fundamental for data analysis, allowing users to gain insights into their data, track progress, and make informed business decisions. They are the foundation for dashboards and provide detailed, granular views of your information.",
+        pt: "Um relatório no Salesforce é uma lista de registros que atendem aos critérios que você define. É exibido em linhas e colunas e pode ser filtrado, agrupado ou exibido em um gráfico. Os relatórios são fundamentais para a análise de dados, permitindo que os usuários obtenham insights sobre seus dados, acompanhem o progresso e tomem decisões de negócios informadas. Eles são a base para os painéis e fornecem visões detalhadas e granulares de suas informações."
       }
     },
     {
       id: 'pf-15',
-      question: { en: "What is a dashboard in Salesforce?", pt: "O que é um painel no Salesforce?" },
+      question: { en: "What is the purpose of a permission set?", pt: "Qual o propósito de um conjunto de permissões?" },
       options: [
-        { en: "Visual display of key metrics and trends", pt: "Exibição visual de métricas e tendências" },
-        { en: "A control panel for system settings", pt: "Um painel de controle para configurações do sistema" },
-        { en: "A detailed tabular data report", pt: "Um relatório de dados tabular detalhado" },
-        { en: "An interactive user input form", pt: "Um formulário interativo de entrada do usuário" }
+        { en: "To grant additional permissions to specific users", pt: "Conceder permissões adicionais a usuários específicos" },
+        { en: "To restrict access to certain records", pt: "Restringir o acesso a determinados registros" },
+        { en: "To define the user interface layout", pt: "Definir o layout da interface do usuário" },
+        { en: "To create custom automation rules", pt: "Criar regras de automação personalizadas" }
       ],
       correct: 0,
       explanation: { 
-        en: "A Salesforce Dashboard provides a visual representation of key metrics and trends, aggregating data from multiple reports into a single, dynamic interface. Dashboards are highly customizable, allowing users to visualize data through various chart types and gauges, offering quick insights into business performance. They are instrumental for monitoring progress, identifying areas for improvement, and making data-driven decisions at a glance, enhancing strategic oversight.",
-        pt: "Um Painel do Salesforce oferece uma representação visual de métricas e tendências chave, agregando dados de múltiplos relatórios em uma única interface dinâmica. Os painéis são altamente personalizáveis, permitindo que os usuários visualizem dados através de vários tipos de gráficos e medidores, oferecendo insights rápidos sobre o desempenho dos negócios. Eles são instrumentais para monitorar o progresso, identificar áreas de melhoria e tomar decisões baseadas em dados rapidamente, aprimorando a supervisão estratégica."
+        en: "A permission set is a collection of settings and permissions that gives users access to various tools and functions. Permission sets are used to grant additional permissions to specific users, on top of their existing profile permissions, without having to create a new profile for every unique requirement. This provides a flexible and scalable way to manage user access and permissions in Salesforce.",
+        pt: "Um conjunto de permissões é uma coleção de configurações e permissões que dá aos usuários acesso a várias ferramentas e funções. Os conjuntos de permissões são usados para conceder permissões adicionais a usuários específicos, além de suas permissões de perfil existentes, sem ter que criar um novo perfil para cada requisito exclusivo. Isso fornece uma maneira flexível e escalável de gerenciar o acesso e as permissões do usuário no Salesforce."
       }
     }
   ],
   'admin-sales': [
     {
       id: 'as-1',
-      question: { en: "Max active assignment rules per object?", pt: "Máximo de regras de atribuição ativas por objeto?" },
+      question: { en: "What is a sales process?", pt: "O que é um processo de vendas?" },
       options: [
-        { en: "One active rule per object", pt: "Uma regra ativa por objeto" },
-        { en: "Five active rules per object", pt: "Cinco regras ativas por objeto" },
-        { en: "Ten active rules per object", pt: "Dez regras ativas por objeto" },
-        { en: "Unlimited active rules allowed", pt: "Regras ativas ilimitadas permitidas" }
+        { en: "A set of stages for tracking opportunities", pt: "Um conjunto de estágios para acompanhar oportunidades" },
+        { en: "A tool for managing customer support cases", pt: "Uma ferramenta para gerenciar casos de suporte ao cliente" },
+        { en: "A feature for automating marketing campaigns", pt: "Um recurso para automatizar campanhas de marketing" },
+        { en: "A method for creating custom reports", pt: "Um método para criar relatórios personalizados" }
       ],
       correct: 0,
       explanation: { 
-        en: "In Salesforce, only one assignment rule can be active for a given object at any time. This active rule, however, can contain multiple rule entries, each with its own criteria and assignment actions. This design ensures a clear and predictable flow for record assignment, preventing conflicts and ensuring that records are routed correctly to users or queues based on the defined business logic. It's a fundamental aspect of managing lead and case distribution efficiently.",
-        pt: "No Salesforce, apenas uma regra de atribuição pode estar ativa para um determinado objeto a qualquer momento. Esta regra ativa, no entanto, pode conter múltiplas entradas de regra, cada uma com seus próprios critérios e ações de atribuição. Este design garante um fluxo claro e previsível para a atribuição de registros, prevenindo conflitos e garantindo que os registros sejam roteados corretamente para usuários ou filas com base na lógica de negócios definida. É um aspecto fundamental para gerenciar a distribuição de leads e casos de forma eficiente."
+        en: "A sales process in Salesforce defines the stages that an opportunity goes through from creation to close. It helps standardize sales operations, ensures consistency in how opportunities are managed, and provides a clear framework for forecasting and reporting. By mapping out the sales cycle, organizations can better guide their sales teams and track progress effectively.",
+        pt: "Um processo de vendas no Salesforce define os estágios pelos quais uma oportunidade passa desde a criação até o fechamento. Ajuda a padronizar as operações de vendas, garante consistência na forma como as oportunidades são gerenciadas e fornece uma estrutura clara para previsão e relatórios. Ao mapear o ciclo de vendas, as organizações podem orientar melhor suas equipes de vendas e acompanhar o progresso de forma eficaz."
       }
     },
     {
       id: 'as-2',
-      question: { en: "Which feature automatically assigns records to users or queues?", pt: "Qual recurso atribui automaticamente registros a usuários ou filas?" },
+      question: { en: "What is a lead in Salesforce?", pt: "O que é um lead no Salesforce?" },
       options: [
-        { en: "Workflow automation processes", pt: "Processos de automação de fluxo de trabalho" },
-        { en: "Assignment rule configurations", pt: "Configurações de regras de atribuição" },
-        { en: "Data validation rule enforcement", pt: "Aplicação de regras de validação de dados" },
-        { en: "Process Builder flow definitions", pt: "Definições de fluxo do Process Builder" }
+        { en: "A potential customer or prospect", pt: "Um cliente potencial ou prospect" },
+        { en: "An existing customer account", pt: "Uma conta de cliente existente" },
+        { en: "A closed sales opportunity", pt: "Uma oportunidade de vendas fechada" },
+        { en: "A customer support inquiry", pt: "Uma consulta de suporte ao cliente" }
       ],
-      correct: 1,
+      correct: 0,
       explanation: { 
-        en: "Assignment Rules are a core Salesforce feature designed to automatically route new or updated records, such as Leads and Cases, to the most appropriate users or queues. This automation is based on predefined criteria, ensuring that incoming work is distributed efficiently and consistently. By reducing manual effort and speeding up response times, assignment rules significantly improve operational efficiency and customer satisfaction, making them vital for effective sales and service operations.",
-        pt: "As Regras de Atribuição são um recurso central do Salesforce projetado para rotear automaticamente registros novos ou atualizados, como Leads e Casos, para os usuários ou filas mais apropriados. Essa automação é baseada em critérios predefinidos, garantindo que o trabalho recebido seja distribuído de forma eficiente e consistente. Ao reduzir o esforço manual e acelerar os tempos de resposta, as regras de atribuição melhoram significativamente a eficiência operacional e a satisfação do cliente, tornando-as vitais para operações eficazes de vendas e serviços."
+        en: "A lead in Salesforce represents a potential customer or prospect who has shown interest in your product or service but has not yet been qualified. Leads are typically the first step in the sales process and need to be nurtured and qualified before being converted into an account, contact, and optionally, an opportunity. Effective lead management is crucial for building a healthy sales pipeline.",
+        pt: "Um lead no Salesforce representa um cliente em potencial ou prospect que demonstrou interesse em seu produto ou serviço, mas ainda não foi qualificado. Os leads são normalmente o primeiro passo no processo de vendas e precisam ser nutridos e qualificados antes de serem convertidos em uma conta, contato e, opcionalmente, uma oportunidade. O gerenciamento eficaz de leads é crucial para construir um pipeline de vendas saudável."
       }
     },
     {
       id: 'as-3',
-      question: { en: "What is a queue in Salesforce?", pt: "O que é uma fila no Salesforce?" },
+      question: { en: "What happens when a lead is converted?", pt: "O que acontece quando um lead é convertido?" },
       options: [
-        { en: "A shared record assignment pool", pt: "Um pool de atribuição de registros compartilhado" },
-        { en: "A sequential task processing list", pt: "Uma lista de processamento sequencial de tarefas" },
-        { en: "A personal user task management tool", pt: "Uma ferramenta pessoal de gerenciamento de tarefas" },
-        { en: "A system for automated email responses", pt: "Um sistema para respostas automáticas de e-mail" }
+        { en: "An Account, Contact, and Opportunity are created", pt: "Uma Conta, Contato e Oportunidade são criados" },
+        { en: "The lead record is permanently deleted", pt: "O registro do lead é excluído permanentemente" },
+        { en: "A new marketing campaign is launched", pt: "Uma nova campanha de marketing é lançada" },
+        { en: "The lead is assigned to a different user", pt: "O lead é atribuído a um usuário diferente" }
       ],
       correct: 0,
       explanation: { 
-        en: "A queue in Salesforce acts as a shared holding area where records (like cases, leads, or custom objects) can be stored until they are assigned to a user or group. This mechanism facilitates collaborative workload management, allowing teams to collectively own and process records. It ensures that no record is left unattended and helps distribute work evenly among team members, significantly improving response times and overall operational efficiency.",
-        pt: "Uma fila no Salesforce atua como uma área de espera compartilhada onde registros (como casos, leads ou objetos personalizados) podem ser armazenados até serem atribuídos a um usuário ou grupo. Esse mecanismo facilita o gerenciamento colaborativo da carga de trabalho, permitindo que as equipes possuam e processem registros coletivamente. Garante que nenhum registro seja deixado sem atenção e ajuda a distribuir o trabalho uniformemente entre os membros da equipe, melhorando significativamente os tempos de resposta e a eficiência operacional geral."
+        en: "When a lead is converted in Salesforce, the system automatically creates a new Account, Contact, and, optionally, an Opportunity record from the lead information. This process signifies that the lead has been qualified and is now a viable prospect. The original lead record is then archived, preserving its data for reporting and historical tracking, ensuring a seamless transition from prospecting to active selling.",
+        pt: "Quando um lead é convertido no Salesforce, o sistema cria automaticamente uma nova Conta, Contato e, opcionalmente, um registro de Oportunidade a partir das informações do lead. Esse processo significa que o lead foi qualificado e agora é um prospect viável. O registro do lead original é então arquivado, preservando seus dados para relatórios e rastreamento histórico, garantindo uma transição perfeita da prospecção para a venda ativa."
       }
     },
     {
       id: 'as-4',
-      question: { en: "What is a public group?", pt: "O que é um grupo público?" },
+      question: { en: "What is an opportunity in Salesforce?", pt: "O que é uma oportunidade no Salesforce?" },
       options: [
-        { en: "A collection of users and roles", pt: "Uma coleção de usuários e funções" },
-        { en: "A group for external community users", pt: "Um grupo para usuários da comunidade externa" },
-        { en: "A social media collaboration feature", pt: "Um recurso de colaboração de mídia social" },
-        { en: "A profile-based security setting", pt: "Uma configuração de segurança baseada em perfil" }
+        { en: "A potential revenue-generating deal", pt: "Um negócio potencial que gera receita" },
+        { en: "A customer service ticket or case", pt: "Um ticket ou caso de atendimento ao cliente" },
+        { en: "A marketing email campaign list", pt: "Uma lista de campanha de email marketing" },
+        { en: "A product or service catalog entry", pt: "Uma entrada de catálogo de produto ou serviço" }
       ],
       correct: 0,
       explanation: { 
-        en: "A public group in Salesforce is a flexible way to group users, roles, other public groups, or territories. Its primary purpose is to simplify the management of record access by allowing administrators to grant sharing permissions to a collective rather than individual users. This is particularly useful when setting up sharing rules, assigning records to queues, or managing email alerts, ensuring efficient and scalable security and collaboration within the organization.",
-        pt: "Um grupo público no Salesforce é uma forma flexível de agrupar usuários, funções, outros grupos públicos ou territórios. Seu principal objetivo é simplificar o gerenciamento do acesso a registros, permitindo que os administradores concedam permissões de compartilhamento a um coletivo, em vez de usuários individuais. Isso é particularmente útil ao configurar regras de compartilhamento, atribuir registros a filas ou gerenciar alertas por e-mail, garantindo segurança e colaboração eficientes e escaláveis dentro da organização."
+        en: "An opportunity in Salesforce represents a potential revenue-generating deal that you are tracking. It moves through a series of sales stages, from initial qualification to final closing. Opportunities are central to sales forecasting and pipeline management, providing a clear view of potential income and the health of your sales efforts. They are a critical object for any sales-focused organization using Salesforce.",
+        pt: "Uma oportunidade no Salesforce representa um negócio em potencial que gera receita que você está rastreando. Ela passa por uma série de estágios de vendas, desde a qualificação inicial até o fechamento final. As oportunidades são centrais para a previsão de vendas e o gerenciamento do pipeline, fornecendo uma visão clara da receita potencial e da saúde de seus esforços de vendas. Elas são um objeto crítico para qualquer organização focada em vendas que usa o Salesforce."
       }
     },
     {
       id: 'as-5',
-      question: { en: "What is the purpose of field-level security?", pt: "Qual é o propósito da segurança no nível de campo?" },
+      question: { en: "What is the purpose of a queue?", pt: "Qual o propósito de uma fila?" },
       options: [
-        { en: "Restricts access to individual record fields", pt: "Restringe acesso a campos de registro individuais" },
-        { en: "Controls user access to entire records", pt: "Controla acesso do usuário a registros inteiros" },
-        { en: "Manages user authentication processes", pt: "Gerencia processos de autenticação de usuário" },
-        { en: "Defines object-level data permissions", pt: "Define permissões de dados no nível do objeto" }
+        { en: "To hold records that are not yet owned by a user", pt: "Manter registros que ainda não pertencem a um usuário" },
+        { en: "To create a list of tasks for a user to complete", pt: "Criar uma lista de tarefas para um usuário concluir" },
+        { en: "To store a backup of important data records", pt: "Armazenar um backup de registros de dados importantes" },
+        { en: "To define a sequence of approval steps", pt: "Definir uma sequência de etapas de aprovação" }
       ],
       correct: 0,
       explanation: { 
-        en: "Field-level security (FLS) in Salesforce is a granular security control that allows administrators to restrict access to specific fields on a record based on a user's profile or permission sets. This ensures that sensitive or confidential data, such as salary information or private notes, is only visible and editable by authorized users. FLS is a critical component of data privacy and compliance, enabling organizations to maintain strict control over who sees what information within the platform, thereby enhancing data integrity and security.",
-        pt: "A segurança no nível de campo (FLS) no Salesforce é um controle de segurança granular que permite aos administradores restringir o acesso a campos específicos em um registro com base no perfil ou conjuntos de permissões de um usuário. Isso garante que dados sensíveis ou confidenciais, como informações salariais ou notas privadas, sejam visíveis e editáveis apenas por usuários autorizados. O FLS é um componente crítico da privacidade e conformidade de dados, permitindo que as organizações mantenham controle rigoroso sobre quem vê quais informações dentro da plataforma, aumentando assim a integridade e a segurança dos dados."
+        en: "Queues in Salesforce are used to hold records that are not yet owned by a specific user. This allows teams to share the workload and manage leads, cases, or other objects more efficiently. Records in a queue can be accessed and taken ownership of by any member of the queue, ensuring that no work item is left unattended and that response times are improved.",
+        pt: "As filas no Salesforce são usadas para manter registros que ainda não pertencem a um usuário específico. Isso permite que as equipes compartilhem a carga de trabalho e gerenciem leads, casos ou outros objetos de forma mais eficiente. Os registros em uma fila podem ser acessados e assumidos por qualquer membro da fila, garantindo que nenhum item de trabalho seja deixado sem atendimento e que os tempos de resposta sejam aprimorados."
       }
     },
     {
       id: 'as-6',
-      question: { en: "What is a permission set?", pt: "O que é um conjunto de permissões?" },
+      question: { en: "What is a product in Salesforce?", pt: "O que é um produto no Salesforce?" },
       options: [
-        { en: "Extends user access without changing profile", pt: "Estende acesso do usuário sem mudar perfil" },
-        { en: "Defines baseline object and field access", pt: "Define acesso base a objeto e campo" },
-        { en: "Groups users for shared record access", pt: "Agrupa usuários para acesso compartilhado a registros" },
-        { en: "Manages external system integration settings", pt: "Gerencia configurações de integração de sistema externo" }
+        { en: "An item or service that your company sells", pt: "Um item ou serviço que sua empresa vende" },
+        { en: "A category of customer support cases", pt: "Uma categoria de casos de suporte ao cliente" },
+        { en: "A type of marketing campaign activity", pt: "Um tipo de atividade de campanha de marketing" },
+        { en: "A custom field on the Account object", pt: "Um campo personalizado no objeto Conta" }
       ],
       correct: 0,
       explanation: { 
-        en: "A permission set in Salesforce is a collection of settings and permissions that gives users access to various tools and functions. Unlike profiles, which typically define a user's baseline access, permission sets are used to grant additional permissions and access settings to specific users or groups without altering their profile. This modular approach allows for more flexible and precise control over user access, making it easier to manage security and extend functionalities as business needs evolve, promoting the principle of least privilege.",
-        pt: "Um conjunto de permissões no Salesforce é uma coleção de configurações e permissões que concede aos usuários acesso a várias ferramentas e funções. Ao contrário dos perfis, que geralmente definem o acesso básico de um usuário, os conjuntos de permissões são usados para conceder permissões e configurações de acesso adicionais a usuários ou grupos específicos sem alterar seu perfil. Essa abordagem modular permite um controle mais flexível e preciso sobre o acesso do usuário, facilitando o gerenciamento da segurança e a extensão de funcionalidades à medida que as necessidades de negócios evoluem, promovendo o princípio do menor privilégio."
+        en: "In Salesforce, a Product is an item or service that your company sells. Products can be added to opportunities, quotes, and orders, allowing you to track what you are selling and at what price. By using products, you can maintain a standardized catalog of your offerings, which helps ensure consistency in pricing and reporting across your sales team.",
+        pt: "No Salesforce, um Produto é um item ou serviço que sua empresa vende. Os produtos podem ser adicionados a oportunidades, cotações e pedidos, permitindo que você rastreie o que está vendendo e a que preço. Ao usar produtos, você pode manter um catálogo padronizado de suas ofertas, o que ajuda a garantir a consistência nos preços e nos relatórios em toda a sua equipe de vendas."
       }
     },
     {
       id: 'as-7',
-      question: { en: "What is organization-wide default (OWD)?", pt: "O que é o padrão de toda a organização (OWD)?" },
+      question: { en: "What is a price book?", pt: "O que é um catálogo de preços?" },
       options: [
-        { en: "Baseline record access for all users", pt: "Acesso base a registros para todos os usuários" },
-        { en: "Controls field-level data visibility", pt: "Controla visibilidade de dados no nível do campo" },
-        { en: "Security settings for guest users", pt: "Configurações de segurança para usuários convidados" },
-        { en: "Rule for sharing report folders", pt: "Regra para compartilhar pastas de relatório" }
+        { en: "A list of products and their associated prices", pt: "Uma lista de produtos e seus preços associados" },
+        { en: "A collection of customer discount codes", pt: "Uma coleção de códigos de desconto para clientes" },
+        { en: "A report that shows sales revenue by region", pt: "Um relatório que mostra a receita de vendas por região" },
+        { en: "A tool for forecasting future sales trends", pt: "Uma ferramenta para prever tendências de vendas futuras" }
       ],
       correct: 0,
       explanation: { 
-        en: "Organization-Wide Defaults (OWD) in Salesforce define the most restrictive baseline level of access that users have to records owned by others. This setting acts as the foundation for the sharing model, determining whether users can view, edit, or delete records they don't own. While OWDs set the default, access can be expanded through other sharing mechanisms like role hierarchies, sharing rules, and manual sharing, ensuring data security while allowing necessary collaboration.",
-        pt: "Padrões de toda a organização (OWD) no Salesforce definem o nível base mais restritivo de acesso que os usuários têm aos registros de propriedade de outros. Essa configuração atua como a base para o modelo de compartilhamento, determinando se os usuários podem visualizar, editar ou excluir registros que não possuem. Embora os OWDs definam o padrão, o acesso pode ser expandido através de outros mecanismos de compartilhamento, como hierarquias de funções, regras de compartilhamento e compartilhamento manual, garantindo a segurança dos dados e permitindo a colaboração necessária."
+        en: "A Price Book in Salesforce is a list of products and their associated prices. It allows you to create multiple price lists for your products, so you can offer different prices to different segments of customers. For example, you might have a standard price book for all customers and a custom price book with discounted prices for partners or high-volume buyers. This flexibility is essential for managing complex pricing strategies.",
+        pt: "Um Catálogo de Preços no Salesforce é uma lista de produtos e seus preços associados. Ele permite que você crie várias listas de preços para seus produtos, para que possa oferecer preços diferentes para diferentes segmentos de clientes. Por exemplo, você pode ter um catálogo de preços padrão para todos os clientes e um catálogo de preços personalizado com preços com desconto para parceiros ou compradores de alto volume. Essa flexibilidade é essencial para gerenciar estratégias de preços complexas."
       }
     },
     {
       id: 'as-8',
-      question: { en: "What is a sandbox?", pt: "O que é uma sandbox?" },
+      question: { en: "What is a quote in Salesforce?", pt: "O que é uma cotação no Salesforce?" },
       options: [
-        { en: "A copy of your org for testing", pt: "Uma cópia da sua organização para testes" },
-        { en: "A secure data backup solution", pt: "Uma solução segura de backup de dados" },
-        { en: "A tool for managing user profiles", pt: "Uma ferramenta para gerenciar perfis de usuário" },
-        { en: "A live production environment", pt: "Um ambiente de produção ao vivo" }
+        { en: "A document that shows proposed prices for products and services", pt: "Um documento que mostra os preços propostos para produtos e serviços" },
+        { en: "A summary of a customer's purchase history", pt: "Um resumo do histórico de compras de um cliente" },
+        { en: "A request for a new product feature", pt: "Uma solicitação de um novo recurso de produto" },
+        { en: "A contract for a long-term service agreement", pt: "Um contrato para um acordo de serviço de longo prazo" }
       ],
       correct: 0,
       explanation: { 
-        en: "A Salesforce sandbox is an isolated copy of your organization, including its metadata and data, in a separate environment. Its primary purpose is to provide a safe space for development, testing, and training without impacting your live production data or operations. This allows developers and administrators to build, test, and deploy new functionalities, configurations, or integrations with confidence, ensuring stability and quality before releasing changes to end-users.",
-        pt: "Uma sandbox do Salesforce é uma cópia isolada da sua organização, incluindo seus metadados e dados, em um ambiente separado. Seu principal objetivo é fornecer um espaço seguro para desenvolvimento, teste e treinamento sem impactar seus dados ou operações de produção ao vivo. Isso permite que desenvolvedores e administradores construam, testem e implementem novas funcionalidades, configurações ou integrações com confiança, garantindo estabilidade e qualidade antes de liberar as alterações para os usuários finais."
+        en: "A Quote in Salesforce is a document that you provide to a customer, showing proposed prices for your products and services. Quotes can be created from opportunities and can be customized with discounts, quantities, and other details. Once a customer accepts a quote, it can be synced with the opportunity to ensure that the sales data is accurate and up-to-date, streamlining the sales process from proposal to close.",
+        pt: "Uma Cotação no Salesforce é um documento que você fornece a um cliente, mostrando os preços propostos para seus produtos e serviços. As cotações podem ser criadas a partir de oportunidades e podem ser personalizadas com descontos, quantidades e outros detalhes. Uma vez que um cliente aceita uma cotação, ela pode ser sincronizada com a oportunidade para garantir que os dados de vendas sejam precisos e atualizados, otimizando o processo de vendas da proposta ao fechamento."
       }
     },
     {
       id: 'as-9',
-      question: { en: "What is a change set?", pt: "O que é um conjunto de alterações?" },
+      question: { en: "What is the purpose of an assignment rule?", pt: "Qual o propósito de uma regra de atribuição?" },
       options: [
-        { en: "Deploys customizations between Salesforce orgs", pt: "Implanta personalizações entre organizações Salesforce" },
-        { en: "Tracks modifications to record data", pt: "Rastreia modificações nos dados do registro" },
-        { en: "Logs system security events", pt: "Registra eventos de segurança do sistema" },
-        { en: "Manages code versions and branches", pt: "Gerencia versões e ramificações de código" }
+        { en: "To automatically assign leads or cases to users or queues", pt: "Atribuir automaticamente leads ou casos a usuários ou filas" },
+        { en: "To define the criteria for a marketing campaign", pt: "Definir os critérios para uma campanha de marketing" },
+        { en: "To set the default values for fields on a new record", pt: "Definir os valores padrão para campos em um novo registro" },
+        { en: "To control the visibility of records in a report", pt: "Controlar a visibilidade de registros em um relatório" }
       ],
       correct: 0,
       explanation: { 
-        en: "A change set in Salesforce is a powerful tool for deploying metadata components from one Salesforce organization to another, typically from a sandbox environment to a production environment. It allows administrators and developers to package and migrate customizations, such as custom objects, fields, Apex classes, and Visualforce pages, without writing code. This declarative deployment method ensures consistency and reduces manual errors, making it a fundamental part of the application lifecycle management process within Salesforce.",
-        pt: "Um conjunto de alterações no Salesforce é uma ferramenta poderosa para implantar componentes de metadados de uma organização Salesforce para outra, tipicamente de um ambiente sandbox para um ambiente de produção. Ele permite que administradores e desenvolvedores empacotem e migrem personalizações, como objetos personalizados, campos, classes Apex e páginas Visualforce, sem escrever código. Este método de implantação declarativa garante consistência e reduz erros manuais, tornando-o uma parte fundamental do processo de gerenciamento do ciclo de vida do aplicativo dentro do Salesforce."
+        en: "Assignment Rules in Salesforce are used to automatically assign incoming leads and cases to the appropriate users or queues based on criteria that you define. This helps ensure that no lead or case is left unattended and that they are routed to the person or team best equipped to handle them. By automating the assignment process, you can improve response times and increase overall efficiency in your sales and service operations.",
+        pt: "As Regras de Atribuição no Salesforce são usadas para atribuir automaticamente leads e casos recebidos aos usuários ou filas apropriados com base em critérios que você define. Isso ajuda a garantir que nenhum lead ou caso seja deixado sem atendimento e que eles sejam roteados para a pessoa ou equipe mais bem equipada para lidar com eles. Ao automatizar o processo de atribuição, você pode melhorar os tempos de resposta e aumentar a eficiência geral em suas operações de vendas e serviços."
       }
     },
     {
       id: 'as-10',
-      question: { en: "What is a lead conversion?", pt: "O que é uma conversão de lead?" },
+      question: { en: "What is a campaign in Salesforce?", pt: "O que é uma campanha no Salesforce?" },
       options: [
-        { en: "Transforms lead into Account, Contact, Opportunity", pt: "Transforma lead em Conta, Contato, Oportunidade" },
-        { en: "A metric for marketing campaign success", pt: "Uma métrica para sucesso de campanha de marketing" },
-        { en: "A method for predicting future sales", pt: "Um método para prever vendas futuras" },
-        { en: "An interaction with customer support", pt: "Uma interação com o suporte ao cliente" }
+        { en: "A marketing initiative, such as an email blast or a trade show", pt: "Uma iniciativa de marketing, como um envio de e-mail em massa ou uma feira" },
+        { en: "A collection of related sales opportunities", pt: "Uma coleção de oportunidades de vendas relacionadas" },
+        { en: "A set of rules for automating customer support", pt: "Um conjunto de regras para automatizar o suporte ao cliente" },
+        { en: "A custom object for tracking project tasks", pt: "Um objeto personalizado para rastrear tarefas de projeto" }
       ],
       correct: 0,
       explanation: { 
-        en: "Lead conversion in Salesforce is the pivotal process of transforming a qualified lead into a new Account, Contact, and optionally an Opportunity. This action signifies that a potential customer has shown sufficient interest and is ready to move further down the sales pipeline. By converting a lead, sales teams can manage the relationship more effectively, track all related activities, and progress towards closing a deal, making it a fundamental step in revenue generation and customer relationship management.",
-        pt: "A conversão de lead no Salesforce é o processo fundamental de transformar um lead qualificado em uma nova Conta, Contato e, opcionalmente, uma Oportunidade. Essa ação significa que um cliente em potencial demonstrou interesse suficiente e está pronto para avançar no funil de vendas. Ao converter um lead, as equipes de vendas podem gerenciar o relacionamento de forma mais eficaz, rastrear todas as atividades relacionadas e progredir para fechar um negócio, tornando-o um passo fundamental na geração de receita e no gerenciamento do relacionamento com o cliente."
+        en: "A Campaign in Salesforce is a marketing initiative that you want to plan, manage, and track. This could be an email blast, a webinar, a trade show, or any other type of marketing effort. By using campaigns, you can measure the effectiveness of your marketing activities, track the leads and opportunities they generate, and calculate the return on investment (ROI) for each initiative.",
+        pt: "Uma Campanha no Salesforce é uma iniciativa de marketing que você deseja planejar, gerenciar e rastrear. Isso pode ser um envio de e-mail em massa, um webinar, uma feira ou qualquer outro tipo de esforço de marketing. Ao usar campanhas, você pode medir a eficácia de suas atividades de marketing, rastrear os leads e oportunidades que elas geram e calcular o retorno sobre o investimento (ROI) para cada iniciativa."
       }
     },
     {
       id: 'as-11',
-      question: { en: "What is a campaign in Salesforce?", pt: "O que é uma campanha no Salesforce?" },
+      question: { en: "What is the difference between a standard object and a custom object?", pt: "Qual a diferença entre um objeto padrão e um objeto personalizado?" },
       options: [
-        { en: "A marketing initiative tracking leads", pt: "Uma iniciativa de marketing que rastreia leads" },
-        { en: "A sales pipeline forecasting tool", pt: "Uma ferramenta de previsão de pipeline de vendas" },
-        { en: "A customer support case system", pt: "Um sistema de casos de suporte ao cliente" },
-        { en: "A project task management feature", pt: "Um recurso de gerenciamento de tarefas de projeto" }
+        { en: "Standard objects are included with Salesforce, while custom objects are created by users", pt: "Objetos padrão são incluídos com o Salesforce, enquanto objetos personalizados são criados pelos usuários" },
+        { en: "Standard objects are used for sales, while custom objects are used for service", pt: "Objetos padrão são usados para vendas, enquanto objetos personalizados são usados para serviço" },
+        { en: "Standard objects can be customized, while custom objects cannot", pt: "Objetos padrão podem ser personalizados, enquanto objetos personalizados não podem" },
+        { en: "Standard objects are only available in Lightning Experience", pt: "Objetos padrão estão disponíveis apenas no Lightning Experience" }
       ],
       correct: 0,
       explanation: { 
-        en: "A campaign in Salesforce is a powerful tool for planning, managing, and tracking marketing initiatives. It allows organizations to measure the effectiveness of their marketing efforts by associating leads, contacts, and opportunities with specific campaigns. This provides valuable insights into ROI, helps optimize future marketing strategies, and ensures that sales and marketing teams are aligned on customer acquisition and engagement goals.",
-        pt: "Uma campanha no Salesforce é uma ferramenta poderosa para planejar, gerenciar e rastrear iniciativas de marketing. Ela permite que as organizações meçam a eficácia de seus esforços de marketing, associando leads, contatos e oportunidades a campanhas específicas. Isso fornece insights valiosos sobre o ROI, ajuda a otimizar futuras estratégias de marketing e garante que as equipes de vendas e marketing estejam alinhadas nos objetivos de aquisição e engajamento de clientes."
+        en: "Standard objects, such as Account, Contact, and Opportunity, are the core objects that come with Salesforce out-of-the-box. Custom objects, on the other hand, are created by users to store information that is unique to their business. While both types of objects can be customized with new fields, page layouts, and validation rules, the key difference is that standard objects are pre-built by Salesforce, while custom objects are user-defined.",
+        pt: "Objetos padrão, como Conta, Contato e Oportunidade, são os objetos principais que vêm com o Salesforce prontos para uso. Objetos personalizados, por outro lado, são criados pelos usuários para armazenar informações exclusivas de seus negócios. Embora ambos os tipos de objetos possam ser personalizados com novos campos, layouts de página e regras de validação, a principal diferença é que os objetos padrão são pré-construídos pelo Salesforce, enquanto os objetos personalizados são definidos pelo usuário."
       }
     },
     {
       id: 'as-12',
-      question: { en: "What is a web-to-lead form?", pt: "O que é um formulário web-to-lead?" },
+      question: { en: "What is a record ID in Salesforce?", pt: "O que é um ID de registro no Salesforce?" },
       options: [
-        { en: "Captures website visitor data as leads", pt: "Captura dados de visitantes do site como leads" },
-        { en: "Creates new customer account records", pt: "Cria novos registros de conta de cliente" },
-        { en: "Submits customer service inquiries", pt: "Envia consultas de atendimento ao cliente" },
-        { en: "Collects internal employee feedback", pt: "Coleta feedback interno de funcionários" }
+        { en: "A unique identifier for every record in Salesforce", pt: "Um identificador exclusivo para cada registro no Salesforce" },
+        { en: "A number that indicates the order in which a record was created", pt: "Um número que indica a ordem em que um registro foi criado" },
+        { en: "A code that determines who can access a record", pt: "Um código que determina quem pode acessar um registro" },
+        { en: "A name that is used to refer to a record in a report", pt: "Um nome que é usado para se referir a um registro em um relatório" }
       ],
       correct: 0,
       explanation: { 
-        en: "A Web-to-Lead form in Salesforce is a powerful marketing automation tool that allows organizations to capture information directly from their website visitors and automatically create new lead records within Salesforce. This streamlines the lead generation process, ensuring that potential customer data is immediately available to sales teams for follow-up. By automating lead capture, businesses can improve response times, reduce manual data entry, and enhance the overall efficiency of their sales pipeline, leading to better conversion rates.",
-        pt: "Um formulário Web-to-Lead no Salesforce é uma poderosa ferramenta de automação de marketing que permite às organizações capturar informações diretamente de seus visitantes do site e criar automaticamente novos registros de lead dentro do Salesforce. Isso otimiza o processo de geração de leads, garantindo que os dados de potenciais clientes estejam imediatamente disponíveis para as equipes de vendas para acompanhamento. Ao automatizar a captura de leads, as empresas podem melhorar os tempos de resposta, reduzir a entrada manual de dados e aumentar a eficiência geral de seu pipeline de vendas, levando a melhores taxas de conversão."
+        en: "A Record ID is a globally unique, 15- or 18-character alphanumeric string that is assigned to every record when it is created in Salesforce. This ID is used to identify the record and is the primary key for the object. Because it is unique across all of Salesforce, it is a reliable way to reference a specific record in formulas, validation rules, and API calls.",
+        pt: "Um ID de Registro é uma string alfanumérica globalmente única, de 15 ou 18 caracteres, que é atribuída a cada registro quando ele é criado no Salesforce. Este ID é usado para identificar o registro e é a chave primária para o objeto. Como é único em todo o Salesforce, é uma maneira confiável de referenciar um registro específico em fórmulas, regras de validação e chamadas de API."
       }
     },
     {
       id: 'as-13',
-      question: { en: "What is a duplicate rule?", pt: "O que é uma regra de duplicatas?" },
+      question: { en: "What is the purpose of a lookup relationship?", pt: "Qual o propósito de um relacionamento de pesquisa?" },
       options: [
-        { en: "Prevents or alerts on duplicate record creation", pt: "Previne ou alerta sobre criação de registros duplicados" },
-        { en: "Identifies existing duplicate records for review", pt: "Identifica registros duplicados existentes para revisão" },
-        { en: "Automates the merging of similar records", pt: "Automatiza a mesclagem de registros semelhantes" },
-        { en: "Automatically deletes redundant data entries", pt: "Exclui automaticamente entradas de dados redundantes" }
+        { en: "To link two objects together", pt: "Ligar dois objetos" },
+        { en: "To create a parent-child relationship where the child record can exist on its own", pt: "Criar um relacionamento pai-filho onde o registro filho pode existir por conta própria" },
+        { en: "To create a relationship where the child record is deleted when the parent is deleted", pt: "Criar um relacionamento onde o registro filho é excluído quando o pai é excluído" },
+        { en: "To create a many-to-many relationship between two objects", pt: "Criar um relacionamento de muitos para muitos entre dois objetos" }
       ],
-      correct: 0,
+      correct: 1,
       explanation: { 
-        en: "Duplicate Rules in Salesforce are crucial for maintaining data quality and integrity by preventing or alerting users about the creation of duplicate records. These rules work in conjunction with Matching Rules to identify potential duplicates based on predefined criteria. When a user attempts to create a record that matches an existing one, the duplicate rule can either block the creation or provide an alert, allowing the user to decide whether to proceed or merge. This helps keep the database clean, improves reporting accuracy, and ensures sales and service teams work with reliable data.",
-        pt: "Regras de Duplicatas no Salesforce são cruciais para manter a qualidade e integridade dos dados, prevenindo ou alertando os usuários sobre a criação de registros duplicados. Essas regras funcionam em conjunto com as Regras de Correspondência para identificar potenciais duplicatas com base em critérios predefinidos. Quando um usuário tenta criar um registro que corresponde a um existente, a regra de duplicatas pode bloquear a criação ou fornecer um alerta, permitindo que o usuário decida se prossegue ou mescla. Isso ajuda a manter o banco de dados limpo, melhora a precisão dos relatórios e garante que as equipes de vendas e serviço trabalhem com dados confiáveis."
+        en: "A lookup relationship is used to link two objects together, creating a parent-child relationship where the child record can exist on its own. This means that if the parent record is deleted, the child record will not be deleted. This is in contrast to a master-detail relationship, where the child record is deleted when the parent is deleted. Lookup relationships are more flexible than master-detail relationships and are used when you need to create a loose coupling between two objects.",
+        pt: "Um relacionamento de pesquisa é usado para ligar dois objetos, criando um relacionamento pai-filho onde o registro filho pode existir por conta própria. Isso significa que, se o registro pai for excluído, o registro filho não será excluído. Isso contrasta com um relacionamento mestre-detalhe, onde o registro filho é excluído quando o pai é excluído. Os relacionamentos de pesquisa são mais flexíveis do que os relacionamentos mestre-detalhe e são usados quando você precisa criar um acoplamento fraco entre dois objetos."
       }
     },
     {
       id: 'as-14',
-      question: { en: "What is an email template?", pt: "O que é um modelo de email?" },
+      question: { en: "What is the purpose of a master-detail relationship?", pt: "Qual o propósito de um relacionamento mestre-detalhe?" },
       options: [
-        { en: "Pre-designed format for consistent emails", pt: "Formato pré-projetado para emails consistentes" },
-        { en: "A tool for mass email distribution", pt: "Uma ferramenta para distribuição de email em massa" },
-        { en: "Feature for tracking email engagement", pt: "Recurso para rastrear engajamento de email" },
-        { en: "Security setting for email content encryption", pt: "Configuração de segurança para criptografia de conteúdo de email" }
+        { en: "To create a parent-child relationship where the child record cannot exist on its own", pt: "Criar um relacionamento pai-filho onde o registro filho não pode existir por conta própria" },
+        { en: "To link two objects together in a loose coupling", pt: "Ligar dois objetos em um acoplamento fraco" },
+        { en: "To create a many-to-many relationship between two objects", pt: "Criar um relacionamento de muitos para muitos entre dois objetos" },
+        { en: "To create a self-relationship on an object", pt: "Criar um auto-relacionamento em um objeto" }
       ],
       correct: 0,
       explanation: { 
-        en: "An email template in Salesforce is a pre-designed email format that allows users to send consistent and professional communications. These templates can include merge fields to personalize content with recipient-specific data, dynamic content for varied messaging, and attachments. They are widely used across sales, service, and marketing for various purposes, such as sending sales proposals, customer service responses, or marketing newsletters, significantly improving efficiency and maintaining brand consistency.",
-        pt: "Um modelo de email no Salesforce é um formato de email pré-projetado que permite aos usuários enviar comunicações consistentes e profissionais. Esses modelos podem incluir campos de mesclagem para personalizar o conteúdo com dados específicos do destinatário, conteúdo dinâmico para mensagens variadas e anexos. Eles são amplamente utilizados em vendas, serviço e marketing para diversas finalidades, como envio de propostas de vendas, respostas de atendimento ao cliente ou newsletters de marketing, melhorando significativamente a eficiência e mantendo a consistência da marca."
+        en: "A master-detail relationship is used to create a parent-child relationship where the child record cannot exist on its own. This means that if the parent record is deleted, the child record will also be deleted. This is in contrast to a lookup relationship, where the child record can exist on its own. Master-detail relationships are less flexible than lookup relationships and provide a number of benefits, such as cascading deletes and roll-up summary fields.",
+        pt: "Um relacionamento mestre-detalhe é usado para criar um relacionamento pai-filho onde o registro filho não pode existir por conta própria. Isso significa que, se o registro pai for excluído, o registro filho também será excluído. Isso contrasta com um relacionamento de pesquisa, onde o registro filho pode existir por conta própria. Os relacionamentos mestre-detalhe são menos flexíveis do que os relacionamentos de pesquisa, mas fornecem vários benefícios, como exclusões em cascata e campos de resumo de totalização."
       }
     },
     {
       id: 'as-15',
-      question: { en: "What is a list view?", pt: "O que é uma visualização de lista?" },
+      question: { en: "What is the purpose of a roll-up summary field?", pt: "Qual o propósito de um campo de resumo de totalização?" },
       options: [
-        { en: "Customizable table of filtered records", pt: "Tabela personalizável de registros filtrados" },
-        { en: "A type of static data report", pt: "Um tipo de relatório de dados estático" },
-        { en: "A component for dashboard visualization", pt: "Um componente para visualização de painel" },
-        { en: "A setting for page layout configuration", pt: "Uma configuração para layout de página" }
+        { en: "To calculate values from related records", pt: "Calcular valores de registros relacionados" },
+        { en: "To create a custom formula field", pt: "Criar um campo de fórmula personalizado" },
+        { en: "To define a validation rule", pt: "Definir uma regra de validação" },
+        { en: "To create a custom report type", pt: "Criar um tipo de relatório personalizado" }
       ],
       correct: 0,
       explanation: { 
-        en: "List Views in Salesforce are highly customizable tables that allow users to filter, sort, and display records based on specific criteria. They provide a quick and efficient way to access and manage groups of records, such as leads, contacts, or cases, without needing to run a full report. Users can create personal list views or share them with others, enhancing productivity and enabling focused data analysis directly from object tabs.",
-        pt: "Visualizações de Lista no Salesforce são tabelas altamente personalizáveis que permitem aos usuários filtrar, classificar e exibir registros com base em critérios específicos. Elas fornecem uma maneira rápida e eficiente de acessar e gerenciar grupos de registros, como leads, contatos ou casos, sem a necessidade de executar um relatório completo. Os usuários podem criar visualizações de lista pessoais ou compartilhá-las com outros, aumentando a produtividade e permitindo a análise de dados focada diretamente das guias de objeto."
+        en: "A roll-up summary field is a field that calculates values from related records, such as the sum of all opportunities for an account. Roll-up summary fields can only be created on the master side of a master-detail relationship. They are a powerful tool for aggregating data and can be used to create a wide variety of reports and dashboards.",
+        pt: "Um campo de resumo de totalização é um campo que calcula valores de registros relacionados, como a soma de todas as oportunidades de uma conta. Os campos de resumo de totalização só podem ser criados no lado mestre de um relacionamento mestre-detalhe. Eles são uma ferramenta poderosa para agregar dados e podem ser usados para criar uma ampla variedade de relatórios e painéis."
       }
     }
   ],
   'service-cloud': [
     {
       id: 'sc-1',
-      question: { en: "What is Service Cloud?", pt: "O que é Service Cloud?" },
-      options: [
-        { en: "Platform for customer service and support", pt: "Plataforma para atendimento e suporte ao cliente" },
-        { en: "A sales process automation tool", pt: "Uma ferramenta de automação de processo de vendas" },
-        { en: "A marketing campaign management system", pt: "Um sistema de gerenciamento de campanhas de marketing" },
-        { en: "A financial accounting solution", pt: "Uma solução de contabilidade financeira" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Service Cloud is Salesforce's comprehensive platform designed to enhance customer service and support operations. It empowers companies to manage customer interactions efficiently, streamline service processes, and ultimately improve customer satisfaction. Key features include robust case management, a self-service knowledge base, and real-time communication channels like live chat, all aimed at providing a seamless and effective support experience.",
-        pt: "Service Cloud é a plataforma abrangente da Salesforce projetada para aprimorar as operações de atendimento e suporte ao cliente. Ela capacita as empresas a gerenciar as interações com os clientes de forma eficiente, otimizar os processos de serviço e, em última análise, melhorar a satisfação do cliente. Os principais recursos incluem gerenciamento robusto de casos, uma base de conhecimento de autoatendimento e canais de comunicação em tempo real, como chat ao vivo, todos visando fornecer uma experiência de suporte contínua e eficaz."
-      }
-    },
-    {
-      id: 'sc-2',
       question: { en: "What is a case in Service Cloud?", pt: "O que é um caso no Service Cloud?" },
       options: [
-        { en: "A customer's question, feedback, or issue", pt: "Uma pergunta, feedback ou problema de um cliente" },
-        { en: "A sales opportunity record", pt: "Um registro de oportunidade de vendas" },
-        { en: "A marketing lead profile", pt: "Um perfil de lead de marketing" },
-        { en: "A project management task", pt: "Uma tarefa de gerenciamento de projeto" }
+        { en: "A customer's question, feedback, or issue", pt: "A pergunta, feedback ou problema de um cliente" },
+        { en: "A sales opportunity in the final stage", pt: "Uma oportunidade de vendas na fase final" },
+        { en: "A marketing campaign targeting a specific audience", pt: "Uma campanha de marketing direcionada a um público específico" },
+        { en: "A task assigned to a support agent", pt: "Uma tarefa atribuída a um agente de suporte" }
       ],
       correct: 0,
       explanation: { 
-        en: "In Service Cloud, a case represents a customer's specific question, feedback, or issue that requires attention and resolution from a service agent. It serves as a central record for all interactions, activities, and information related to that particular customer inquiry. Effective case management is crucial for tracking progress, ensuring timely responses, and ultimately delivering high-quality customer support, leading to improved customer satisfaction and loyalty.",
-        pt: "No Service Cloud, um caso representa uma pergunta, feedback ou problema específico de um cliente que requer atenção e resolução de um agente de serviço. Ele serve como um registro central para todas as interações, atividades e informações relacionadas a essa consulta específica do cliente. O gerenciamento eficaz de casos é crucial para acompanhar o progresso, garantir respostas oportunas e, em última análise, fornecer suporte ao cliente de alta qualidade, levando a uma melhor satisfação e lealdade do cliente."
-      }
-    },
-    {
-      id: 'sc-3',
-      question: { en: "What is a knowledge base in Service Cloud?", pt: "O que é uma base de conhecimento no Service Cloud?" },
-      options: [
-        { en: "Repository of articles and FAQs for self-service", pt: "Repositório de artigos e FAQs para autoatendimento" },
-        { en: "A database of customer contact information", pt: "Um banco de dados de informações de contato do cliente" },
-        { en: "A tool for tracking service agent performance", pt: "Uma ferramenta para rastrear o desempenho do agente de serviço" },
-        { en: "A system for managing customer complaint tickets", pt: "Um sistema para gerenciar tickets de reclamação do cliente" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "A knowledge base in Service Cloud is a centralized, searchable repository of articles, FAQs, troubleshooting guides, and solutions. It empowers both customers and service agents by providing readily accessible information for self-service and quick problem resolution. By enabling customers to find answers independently, it reduces case volume and improves overall efficiency, while also equipping agents with consistent and accurate information to deliver faster support.",
-        pt: "Uma base de conhecimento no Service Cloud é um repositório centralizado e pesquisável de artigos, FAQs, guias de solução de problemas e soluções. Ela capacita clientes e agentes de serviço, fornecendo informações prontamente acessíveis para autoatendimento e resolução rápida de problemas. Ao permitir que os clientes encontrem respostas de forma independente, ela reduz o volume de casos e melhora a eficiência geral, ao mesmo tempo em que equipa os agentes com informações consistentes e precisas para fornecer suporte mais rápido."
-      }
-    },
-    {
-      id: 'sc-4',
-      question: { en: "What is Live Agent?", pt: "O que é Live Agent?" },
-      options: [
-        { en: "Real-time chat tool for customer support", pt: "Ferramenta de chat em tempo real para suporte ao cliente" },
-        { en: "An AI-powered automated chatbot", pt: "Um chatbot automatizado alimentado por IA" },
-        { en: "A tool for managing email-based support", pt: "Uma ferramenta para gerenciar suporte baseado em e-mail" },
-        { en: "A system for inbound and outbound phone calls", pt: "Um sistema para chamadas telefônicas de entrada e saída" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Live Agent is a real-time chat tool within Service Cloud that enables customer service agents to interact directly with customers through a website or community portal. This feature provides immediate, personalized support, allowing agents to answer questions, resolve issues, and guide customers through processes in real-time. It significantly enhances the customer experience by offering instant assistance and improving resolution times, contributing to higher customer satisfaction.",
-        pt: "Live Agent é uma ferramenta de chat em tempo real dentro do Service Cloud que permite que agentes de atendimento ao cliente interajam diretamente com os clientes através de um site ou portal da comunidade. Este recurso fornece suporte imediato e personalizado, permitindo que os agentes respondam a perguntas, resolvam problemas e guiem os clientes através de processos em tempo real. Ele aprimora significativamente a experiência do cliente, oferecendo assistência instantânea e melhorando os tempos de resolução, contribuindo para uma maior satisfação do cliente."
-      }
-    },
-    {
-      id: 'sc-5',
-      question: { en: "What is Omni-Channel in Service Cloud?", pt: "O que é Omni-Channel no Service Cloud?" },
-      options: [
-        { en: "Routes work items to most appropriate agent", pt: "Roteia itens de trabalho para o agente mais apropriado" },
-        { en: "Manages multiple customer communication platforms", pt: "Gerencia múltiplas plataformas de comunicação com o cliente" },
-        { en: "A dashboard for tracking agent availability", pt: "Um painel para rastrear a disponibilidade do agente" },
-        { en: "A system for collecting customer feedback", pt: "Um sistema para coleta de feedback do cliente" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Omni-Channel in Service Cloud is a powerful routing feature that automatically pushes work items (such as cases, chats, or social media posts) to the most appropriate and available service agents. It intelligently distributes workload based on agent capacity, skills, and priority, ensuring that customers are connected with the best-suited agent for their needs. This optimizes agent productivity, reduces wait times, and accelerates resolution, leading to a more efficient and satisfying customer service experience.",
-        pt: "Omni-Channel no Service Cloud é um recurso de roteamento poderoso que automaticamente envia itens de trabalho (como casos, chats ou postagens em mídias sociais) para os agentes de serviço mais apropriados e disponíveis. Ele distribui inteligentemente a carga de trabalho com base na capacidade, habilidades e prioridade do agente, garantindo que os clientes sejam conectados ao agente mais adequado para suas necessidades. Isso otimiza a produtividade do agente, reduz os tempos de espera e acelera a resolução, levando a uma experiência de atendimento ao cliente mais eficiente e satisfatória."
-      }
-    },
-    {
-      id: 'sc-6',
-      question: { en: "What is a Service Console?", pt: "O que é um Console de Serviço?" },
-      options: [
-        { en: "Unified interface for service agents", pt: "Interface unificada para agentes de serviço" },
-        { en: "A tool for generating service reports", pt: "Uma ferramenta para gerar relatórios de serviço" },
-        { en: "A customer self-service web portal", pt: "Um portal web de autoatendimento do cliente" },
-        { en: "A mobile app for field service operations", pt: "Um aplicativo móvel para operações de serviço de campo" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "The Service Console in Salesforce is a unified, productivity-focused interface specifically designed for service agents. It provides a comprehensive 360-degree view of the customer, allowing agents to efficiently manage multiple cases, interactions, and relevant information from a single screen. This streamlined workspace improves agent efficiency, reduces context switching, and ultimately enhances customer satisfaction by enabling faster and more informed service delivery.",
-        pt: "O Console de Serviço no Salesforce é uma interface unificada e focada na produtividade, projetada especificamente para agentes de serviço. Ele fornece uma visão abrangente de 360 graus do cliente, permitindo que os agentes gerenciem eficientemente múltiplos casos, interações e informações relevantes a partir de uma única tela. Este espaço de trabalho otimizado melhora a eficiência do agente, reduz a troca de contexto e, em última análise, aumenta a satisfação do cliente, permitindo uma entrega de serviço mais rápida e informada."
-      }
-    },
-    {
-      id: 'sc-7',
-      question: { en: "What is Entitlement Management?", pt: "O que é Gerenciamento de Direitos?" },
-      options: [
-        { en: "Defines and tracks customer service agreements", pt: "Define e rastreia acordos de serviço ao cliente" },
-        { en: "A tool for managing customer loyalty programs", pt: "Uma ferramenta para gerenciar programas de fidelidade do cliente" },
-        { en: "A system for tracking product warranties", pt: "Um sistema para rastrear garantias de produtos" },
-        { en: "A feature for managing service agent schedules", pt: "Um recurso para gerenciar agendamentos de agentes de serviço" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Entitlement Management in Service Cloud is a crucial feature that helps organizations define, enforce, and track customer service agreements (SLAs) and service contracts. It ensures that customers receive the appropriate level of support based on their purchased products or services and contractual terms. By automating entitlement verification, it streamlines the service process, prevents unauthorized service, and helps maintain compliance with service agreements, ultimately improving customer trust and satisfaction.",
-        pt: "O Gerenciamento de Direitos no Service Cloud é um recurso crucial que ajuda as organizações a definir, aplicar e rastrear acordos de serviço ao cliente (SLAs) e contratos de serviço. Ele garante que os clientes recebam o nível apropriado de suporte com base em seus produtos ou serviços adquiridos e termos contratuais. Ao automatizar a verificação de direitos, ele otimiza o processo de serviço, evita serviços não autorizados e ajuda a manter a conformidade com os acordos de serviço, melhorando, em última análise, a confiança e a satisfação do cliente."
-      }
-    },
-    {
-      id: 'sc-8',
-      question: { en: "What is a Service Level Agreement (SLA)?", pt: "O que é um Acordo de Nível de Serviço (SLA)?" },
-      options: [
-        { en: "Contract defining expected service level", pt: "Contrato que define o nível de serviço esperado" },
-        { en: "Document outlining agent performance metrics", pt: "Documento que descreve as métricas de desempenho do agente" },
-        { en: "Legal agreement between Salesforce and customers", pt: "Acordo legal entre Salesforce e clientes" },
-        { en: "Policy for data privacy and security", pt: "Política para privacidade e segurança de dados" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "A Service Level Agreement (SLA) is a formal contract or agreement that defines the specific level of service expected by a customer from a service provider. In Service Cloud, SLAs are instrumental for tracking and ensuring that customer cases and issues are resolved within agreed-upon timeframes and according to defined service standards. They help manage customer expectations, prioritize work, and provide a measurable benchmark for service performance, contributing significantly to customer satisfaction and operational accountability.",
-        pt: "Um Acordo de Nível de Serviço (SLA) é um contrato ou acordo formal que define o nível específico de serviço esperado por um cliente de um provedor de serviços. No Service Cloud, os SLAs são instrumentais para rastrear e garantir que os casos e problemas dos clientes sejam resolvidos dentro dos prazos acordados e de acordo com os padrões de serviço definidos. Eles ajudam a gerenciar as expectativas dos clientes, priorizar o trabalho e fornecer um benchmark mensurável para o desempenho do serviço, contribuindo significativamente para a satisfação do cliente e a responsabilidade operacional."
-      }
-    },
-    {
-      id: 'sc-9',
-      question: { en: "What is a Milestone?", pt: "O que é um Marco?" },
-      options: [
-        { en: "A required step in a service process", pt: "Uma etapa obrigatória em um processo de serviço" },
-        { en: "A customer feedback survey", pt: "Uma pesquisa de feedback do cliente" },
-        { en: "A performance target for service agents", pt: "Uma meta de desempenho para agentes de serviço" },
-        { en: "A type of report in Service Cloud", pt: "Um tipo de relatório no Service Cloud" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Milestones in Service Cloud are required, time-dependent steps in a service process that must be completed to meet service level agreements (SLAs). They act as critical checkpoints, helping organizations track progress, ensure timely resolution of cases, and avoid SLA breaches. By defining and monitoring milestones, businesses can proactively manage their service commitments, improve operational efficiency, and enhance customer satisfaction by consistently delivering on promised service levels.",
-        pt: "Marcos no Service Cloud são etapas obrigatórias e dependentes do tempo em um processo de serviço que devem ser concluídas para cumprir os acordos de nível de serviço (SLAs). Eles atuam como pontos de verificação críticos, ajudando as organizações a acompanhar o progresso, garantir a resolução oportuna dos casos e evitar violações de SLA. Ao definir e monitorar marcos, as empresas podem gerenciar proativamente seus compromissos de serviço, melhorar a eficiência operacional e aumentar a satisfação do cliente, cumprindo consistentemente os níveis de serviço prometidos."
-      }
-    },
-    {
-      id: 'sc-10',
-      question: { en: "What is a Service Contract?", pt: "O que é um Contrato de Serviço?" },
-      options: [
-        { en: "Agreement for support services with a customer", pt: "Acordo para serviços de suporte com um cliente" },
-        { en: "A contract for product sales transactions", pt: "Um contrato para transações de vendas de produtos" },
-        { en: "A legal document for employee agreements", pt: "Um documento legal para acordos de funcionários" },
-        { en: "A contract for vendor partnership terms", pt: "Um contrato para termos de parceria com fornecedores" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "A Service Contract in Salesforce is a formal agreement between a company and a customer that outlines the terms and conditions for support services. It defines crucial aspects such as service levels, entitlements (what the customer is eligible for), and the products or assets covered. By managing service contracts within Service Cloud, organizations can ensure consistent service delivery, track contract compliance, and provide customers with the support they are entitled to, fostering long-term relationships and customer loyalty.",
-        pt: "Um Contrato de Serviço no Salesforce é um acordo formal entre uma empresa e um cliente que descreve os termos e condições para serviços de suporte. Ele define aspectos cruciais, como níveis de serviço, direitos (o que o cliente é elegível) e os produtos ou ativos cobertos. Ao gerenciar contratos de serviço dentro do Service Cloud, as organizações podem garantir a entrega consistente de serviços, rastrear a conformidade do contrato e fornecer aos clientes o suporte a que têm direito, promovendo relacionamentos de longo prazo e lealdade do cliente."
-      }
-    },
-    {
-      id: 'sc-11',
-      question: { en: "What is a Warranty?", pt: "O que é uma Garantia?" },
-      options: [
-        { en: "A guarantee on a product or service for a specified period", pt: "Uma garantia em um produto ou serviço por um período especificado" },
-        { en: "A type of service contract", pt: "Um tipo de contrato de serviço" },
-        { en: "A customer support plan", pt: "Um plano de suporte ao cliente" },
-        { en: "A legal disclaimer for product liability", pt: "Um aviso legal para responsabilidade do produto" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "A Warranty in Service Cloud represents a guarantee on a product or service for a specified period, often covering defects or malfunctions. By tracking warranties within Salesforce, companies can ensure that customers receive appropriate service and support based on their product coverage and terms. This integration helps streamline the service process, verify eligibility for repairs or replacements, and enhance customer satisfaction by honoring commitments and providing transparent service.",
-        pt: "Uma Garantia no Service Cloud representa uma garantia em um produto ou serviço por um período especificado, muitas vezes cobrindo defeitos ou mau funcionamento. Ao rastrear garantias dentro do Salesforce, as empresas podem garantir que os clientes recebam serviço e suporte apropriados com base na cobertura e nos termos de seus produtos. Essa integração ajuda a otimizar o processo de serviço, verificar a elegibilidade para reparos ou substituições e aumentar a satisfação do cliente, honrando os compromissos e fornecendo um serviço transparente."
-      }
-    },
-    {
-      id: 'sc-12',
-      question: { en: "What is a Contact Center?", pt: "O que é um Contact Center?" },
-      options: [
-        { en: "Department handling all customer communications", pt: "Departamento que lida com todas as comunicações com o cliente" },
-        { en: "A physical location for customer support staff", pt: "Um local físico para a equipe de suporte ao cliente" },
-        { en: "Software solution for managing customer interactions", pt: "Solução de software para gerenciar interações com clientes" },
-        { en: "A system for collecting customer feedback", pt: "Um sistema para coleta de feedback do cliente" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "A Contact Center (often referred to as a Call Center) is a centralized department or operational hub that manages all customer communications across various channels, including phone calls, emails, chats, and social media. Service Cloud provides comprehensive tools to manage these diverse interactions efficiently, enabling agents to deliver consistent and high-quality support. The goal is to streamline customer service operations, improve response times, and enhance the overall customer experience by consolidating communication management.",
-        pt: "Um Contact Center (muitas vezes referido como Call Center) é um departamento centralizado ou hub operacional que gerencia todas as comunicações com o cliente em vários canais, incluindo chamadas telefônicas, e-mails, chats e mídias sociais. O Service Cloud fornece ferramentas abrangentes para gerenciar essas diversas interações de forma eficiente, permitindo que os agentes forneçam suporte consistente e de alta qualidade. O objetivo é otimizar as operações de atendimento ao cliente, melhorar os tempos de resposta e aprimorar a experiência geral do cliente, consolidando o gerenciamento da comunicação."
-      }
-    },
-    {
-      id: 'sc-13',
-      question: { en: "What is CTI (Computer Telephony Integration)?", pt: "O que é CTI (Integração Computador-Telefonia)?" },
-      options: [
-        { en: "Integrates phone systems with computers", pt: "Integra sistemas telefônicos com computadores" },
-        { en: "A tool for managing customer data records", pt: "Uma ferramenta para gerenciar registros de dados do cliente" },
-        { en: "A system for automated call routing", pt: "Um sistema para roteamento automatizado de chamadas" },
-        { en: "A feature for recording customer service calls", pt: "Um recurso para gravar chamadas de atendimento ao cliente" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "CTI (Computer Telephony Integration) is a technology that seamlessly integrates telephone systems with computer systems, particularly within Service Cloud. This integration allows service agents to manage calls, view comprehensive customer information, and log interactions directly within their Salesforce console. CTI significantly enhances agent productivity by providing screen pops with relevant customer data upon incoming calls, reducing manual data entry, and improving the overall efficiency and personalization of customer service interactions.",
-        pt: "CTI (Integração Computador-Telefonia) é uma tecnologia que integra perfeitamente sistemas telefônicos com sistemas de computador, particularmente dentro do Service Cloud. Essa integração permite que os agentes de serviço gerenciem chamadas, visualizem informações abrangentes do cliente e registrem interações diretamente em seu console do Salesforce. O CTI aumenta significativamente a produtividade do agente, fornecendo pop-ups de tela com dados relevantes do cliente em chamadas recebidas, reduzindo a entrada manual de dados e melhorando a eficiência geral e a personalização das interações de atendimento ao cliente."
-      }
-    },
-    {
-      id: 'sc-14',
-      question: { en: "What is a Self-Service Portal?", pt: "O que é um Portal de Autoatendimento?" },
-      options: [
-        { en: "Website for customers to find answers independently", pt: "Site para clientes encontrarem respostas de forma independente" },
-        { en: "A portal for service agents to manage cases", pt: "Um portal para agentes de serviço gerenciarem casos" },
-        { en: "A platform for internal employee support", pt: "Uma plataforma para suporte interno de funcionários" },
-        { en: "A tool for collecting customer feedback", pt: "Uma ferramenta para coletar feedback do cliente" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "A Self-Service Portal in Service Cloud is a dedicated website or online community where customers can independently find answers to their questions, access knowledge articles, log new cases, and resolve issues without direct assistance from a service agent. This empowers customers to help themselves, reduces the volume of inbound support requests, and lowers operational costs. It enhances customer satisfaction by providing convenient, 24/7 access to support resources and fostering a sense of autonomy.",
-        pt: "Um Portal de Autoatendimento no Service Cloud é um site ou comunidade online dedicada onde os clientes podem encontrar respostas para suas perguntas, acessar artigos da base de conhecimento, registrar novos casos e resolver problemas de forma independente, sem assistência direta de um agente de serviço. Isso capacita os clientes a se ajudarem, reduz o volume de solicitações de suporte de entrada e diminui os custos operacionais. Ele aumenta a satisfação do cliente, fornecendo acesso conveniente e 24 horas por dia, 7 dias por semana, aos recursos de suporte e promovendo um senso de autonomia."
-      }
-    },
-    {
-      id: 'sc-15',
-      question: { en: "What is Community Cloud?", pt: "O que é Community Cloud?" },
-      options: [
-        { en: "Platform for building online communities", pt: "Plataforma para construir comunidades online" },
-        { en: "A social media management tool", pt: "Uma ferramenta de gerenciamento de mídia social" },
-        { en: "A platform for internal employee collaboration", pt: "Uma plataforma para colaboração interna de funcionários" },
-        { en: "A system for managing customer data", pt: "Um sistema para gerenciar dados do cliente" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Community Cloud, now known as Experience Cloud, is a Salesforce platform that enables companies to build branded online communities for various stakeholders, including customers, partners, and employees. These communities facilitate collaboration, self-service, and knowledge sharing, allowing users to connect with each other, access relevant information, and engage directly with the company. It enhances customer loyalty, partner effectiveness, and employee engagement by providing a centralized hub for interaction and support.",
-        pt: "Community Cloud, agora conhecido como Experience Cloud, é uma plataforma Salesforce que permite às empresas construir comunidades online de marca para várias partes interessadas, incluindo clientes, parceiros e funcionários. Essas comunidades facilitam a colaboração, o autoatendimento e o compartilhamento de conhecimento, permitindo que os usuários se conectem uns com os outros, acessem informações relevantes e interajam diretamente com a empresa. Ele aumenta a lealdade do cliente, a eficácia do parceiro e o engajamento dos funcionários, fornecendo um hub centralizado para interação e suporte."
-      }
-    }
-  ],
-  'sales': [
-    {
-      id: 'sc-1',
-      question: { en: "What is the purpose of a Sales Process?", pt: "Qual é o propósito de um Processo de Vendas?" },
-      options: [
-        { en: "Control which opportunity stages are available", pt: "Controlar quais estágios de oportunidade estão disponíveis" },
-        { en: "Automate email sending", pt: "Automatizar envio de emails" },
-        { en: "Generate reports", pt: "Gerar relatórios" },
-        { en: "Manage user permissions", pt: "Gerenciar permissões de usuário" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Sales Processes define which opportunity stages are available to different sales teams based on their record types, helping standardize and optimize the sales workflow.",
-        pt: "Processos de Vendas definem quais estágios de oportunidade estão disponíveis para diferentes equipes de vendas baseado em seus tipos de registro, ajudando a padronizar e otimizar o fluxo de trabalho de vendas."
+        en: "In Service Cloud, a case is a record that tracks a customer's question, feedback, or issue. It is the central object in Service Cloud and is used to manage the entire customer service process, from initial contact to resolution. Cases can be created from a variety of channels, such as email, phone, web, and social media, and can be assigned to agents or queues for resolution.",
+        pt: "No Service Cloud, um caso é um registro que rastreia a pergunta, feedback ou problema de um cliente. É o objeto central no Service Cloud e é usado para gerenciar todo o processo de atendimento ao cliente, desde o contato inicial até a resolução. Os casos podem ser criados a partir de uma variedade de canais, como e-mail, telefone, web e mídias sociais, e podem ser atribuídos a agentes ou filas para resolução."
       }
     },
     {
       id: 'sc-2',
-      question: { en: "What is the relationship between Accounts and Opportunities?", pt: "Qual é o relacionamento entre Contas e Oportunidades?" },
+      question: { en: "What is the purpose of a case queue?", pt: "Qual o propósito de uma fila de casos?" },
       options: [
-        { en: "Master-Detail", pt: "Mestre-Detalhe" },
-        { en: "Lookup", pt: "Pesquisa" },
-        { en: "Many-to-Many", pt: "Muitos-para-Muitos" },
-        { en: "Hierarchical", pt: "Hierárquico" }
+        { en: "To hold cases that are not yet assigned to a user", pt: "Manter casos que ainda não foram atribuídos a um usuário" },
+        { en: "To create a list of tasks for a support agent", pt: "Criar uma lista de tarefas para um agente de suporte" },
+        { en: "To store a backup of important case records", pt: "Armazenar um backup de registros de casos importantes" },
+        { en: "To define a sequence of approval steps for a case", pt: "Definir uma sequência de etapas de aprovação para um caso" }
       ],
-      correct: 1,
+      correct: 0,
       explanation: { 
-        en: "Accounts and Opportunities have a Lookup relationship, allowing multiple opportunities to be associated with a single account.",
-        pt: "Contas e Oportunidades têm um relacionamento de Pesquisa, permitindo que múltiplas oportunidades sejam associadas a uma única conta."
+        en: "A case queue is a location where cases are held before they are assigned to a specific user. This allows teams to share the workload and manage cases more efficiently. Cases in a queue can be accessed and taken ownership of by any member of the queue, ensuring that no case is left unattended and that response times are improved.",
+        pt: "Uma fila de casos é um local onde os casos são mantidos antes de serem atribuídos a um usuário específico. Isso permite que as equipes compartilhem a carga de trabalho e gerenciem os casos de forma mais eficiente. Os casos em uma fila podem ser acessados e assumidos por qualquer membro da fila, garantindo que nenhum caso seja deixado sem atendimento e que os tempos de resposta sejam aprimorados."
       }
     },
     {
       id: 'sc-3',
-      question: { en: "What is an opportunity?", pt: "O que é uma oportunidade?" },
+      question: { en: "What is the purpose of a case assignment rule?", pt: "Qual o propósito de uma regra de atribuição de casos?" },
       options: [
-        { en: "A potential revenue-generating event or sale", pt: "Um evento potencial de geração de receita ou venda" },
-        { en: "A business opportunity", pt: "Uma oportunidade de negócio" },
-        { en: "A type of account", pt: "Um tipo de conta" },
-        { en: "A lead", pt: "Um lead" }
+        { en: "To automatically assign cases to users or queues", pt: "Atribuir automaticamente casos a usuários ou filas" },
+        { en: "To define the criteria for a service level agreement", pt: "Definir os critérios para um acordo de nível de serviço" },
+        { en: "To set the default values for fields on a new case", pt: "Definir os valores padrão para campos em um novo caso" },
+        { en: "To control the visibility of cases in a report", pt: "Controlar a visibilidade de casos em um relatório" }
       ],
       correct: 0,
       explanation: { 
-        en: "Opportunities represent potential revenue-generating events or sales. They track details like amount, close date, stage, and probability.",
-        pt: "Oportunidades representam eventos potenciais de geração de receita ou vendas. Elas rastreiam detalhes como valor, data de fechamento, estágio e probabilidade."
+        en: "A case assignment rule is used to automatically assign incoming cases to the appropriate users or queues based on criteria that you define. This helps ensure that no case is left unattended and that they are routed to the person or team best equipped to handle them. By automating the assignment process, you can improve response times and increase overall efficiency in your service operations.",
+        pt: "Uma regra de atribuição de casos é usada para atribuir automaticamente os casos recebidos aos usuários ou filas apropriados com base nos critérios que você define. Isso ajuda a garantir que nenhum caso seja deixado sem atendimento e que eles sejam roteados para a pessoa ou equipe mais bem equipada para lidar com eles. Ao automatizar o processo de atribuição, você pode melhorar os tempos de resposta e aumentar a eficiência geral em suas operações de serviço."
       }
     },
     {
       id: 'sc-4',
-      question: { en: "What is a product in Salesforce?", pt: "O que é um produto no Salesforce?" },
+      question: { en: "What is the purpose of a case escalation rule?", pt: "Qual o propósito de uma regra de escalonamento de casos?" },
       options: [
-        { en: "Items your company sells", pt: "Itens que sua empresa vende" },
-        { en: "A Salesforce product", pt: "Um produto Salesforce" },
-        { en: "A type of service", pt: "Um tipo de serviço" },
-        { en: "A report type", pt: "Um tipo de relatório" }
+        { en: "To automatically escalate cases that are not resolved within a certain time frame", pt: "Escalonar automaticamente casos que não são resolvidos dentro de um determinado período de tempo" },
+        { en: "To define the criteria for a service level agreement", pt: "Definir os critérios para um acordo de nível de serviço" },
+        { en: "To set the default values for fields on a new case", pt: "Definir os valores padrão para campos em um novo caso" },
+        { en: "To control the visibility of cases in a report", pt: "Controlar a visibilidade de casos em um relatório" }
       ],
       correct: 0,
       explanation: { 
-        en: "Products are the items and services your company sells. They can be added to opportunities via opportunity line items and tracked in price books.",
-        pt: "Produtos são os itens e serviços que sua empresa vende. Eles podem ser adicionados a oportunidades via itens de linha de oportunidade e rastreados em livros de preços."
+        en: "A case escalation rule is used to automatically escalate cases that are not resolved within a certain time frame. This helps ensure that high-priority cases are not neglected and that they are brought to the attention of the appropriate people. By automating the escalation process, you can improve customer satisfaction and reduce the risk of service level agreement (SLA) violations.",
+        pt: "Uma regra de escalonamento de casos é usada para escalonar automaticamente os casos que não são resolvidos dentro de um determinado período de tempo. Isso ajuda a garantir que os casos de alta prioridade não sejam negligenciados e que sejam levados ao conhecimento das pessoas apropriadas. Ao automatizar o processo de escalonamento, você pode melhorar a satisfação do cliente e reduzir o risco de violações do acordo de nível de serviço (SLA)."
       }
     },
     {
       id: 'sc-5',
-      question: { en: "What is a price book?", pt: "O que é um livro de preços?" },
+      question: { en: "What is the purpose of a knowledge base?", pt: "Qual o propósito de uma base de conhecimento?" },
       options: [
-        { en: "A collection of products and their prices", pt: "Uma coleção de produtos e seus preços" },
-        { en: "A book about pricing", pt: "Um livro sobre precificação" },
-        { en: "A pricing strategy", pt: "Uma estratégia de precificação" },
-        { en: "A type of report", pt: "Um tipo de relatório" }
+        { en: "To store and manage a library of articles and solutions", pt: "Armazenar e gerenciar uma biblioteca de artigos e soluções" },
+        { en: "To create a list of tasks for a support agent", pt: "Criar uma lista de tarefas para um agente de suporte" },
+        { en: "To store a backup of important case records", pt: "Armazenar um backup de registros de casos importantes" },
+        { en: "To define a sequence of approval steps for a case", pt: "Definir uma sequência de etapas de aprovação para um caso" }
       ],
       correct: 0,
       explanation: { 
-        en: "Price Books are collections of products and their prices. Organizations can have multiple price books for different markets, currencies, or customer segments.",
-        pt: "Livros de Preços são coleções de produtos e seus preços. As organizações podem ter múltiplos livros de preços para diferentes mercados, moedas ou segmentos de clientes."
+        en: "A knowledge base is a library of articles and solutions that can be used by support agents and customers to find answers to common questions. By creating a knowledge base, you can deflect cases, reduce support costs, and improve customer satisfaction. A well-maintained knowledge base is a valuable asset for any service organization.",
+        pt: "Uma base de conhecimento é uma biblioteca de artigos e soluções que podem ser usados por agentes de suporte e clientes para encontrar respostas para perguntas comuns. Ao criar uma base de conhecimento, você pode desviar casos, reduzir os custos de suporte e melhorar a satisfação do cliente. Uma base de conhecimento bem mantida é um ativo valioso para qualquer organização de serviço."
       }
     },
     {
       id: 'sc-6',
-      question: { en: "What is a quote in Salesforce?", pt: "O que é uma cotação no Salesforce?" },
+      question: { en: "What is the purpose of a service level agreement (SLA)?", pt: "Qual o propósito de um acordo de nível de serviço (SLA)?" },
       options: [
-        { en: "A record of proposed prices for products and services", pt: "Um registro de preços propostos para produtos e serviços" },
-        { en: "A famous saying", pt: "Um ditado famoso" },
-        { en: "A type of opportunity", pt: "Um tipo de oportunidade" },
-        { en: "A contract", pt: "Um contrato" }
+        { en: "To define the level of service that a customer can expect to receive", pt: "Definir o nível de serviço que um cliente pode esperar receber" },
+        { en: "To create a list of tasks for a support agent", pt: "Criar uma lista de tarefas para um agente de suporte" },
+        { en: "To store a backup of important case records", pt: "Armazenar um backup de registros de casos importantes" },
+        { en: "To define a sequence of approval steps for a case", pt: "Definir uma sequência de etapas de aprovação para um caso" }
       ],
       correct: 0,
       explanation: { 
-        en: "Quotes are records of proposed prices for products and services. They can be created from opportunities and sent to customers for approval.",
-        pt: "Cotações são registros de preços propostos para produtos e serviços. Elas podem ser criadas a partir de oportunidades e enviadas aos clientes para aprovação."
+        en: "A service level agreement (SLA) is a contract between a service provider and a customer that defines the level of service that the customer can expect to receive. SLAs typically include metrics such as response time, resolution time, and uptime. By using SLAs, you can set clear expectations with your customers and ensure that you are meeting their needs.",
+        pt: "Um acordo de nível de serviço (SLA) é um contrato entre um provedor de serviços e um cliente que define o nível de serviço que o cliente pode esperar receber. Os SLAs geralmente incluem métricas como tempo de resposta, tempo de resolução e tempo de atividade. Ao usar SLAs, você pode definir expectativas claras com seus clientes e garantir que está atendendo às suas necessidades."
       }
     },
     {
       id: 'sc-7',
-      question: { en: "What is a contract?", pt: "O que é um contrato?" },
+      question: { en: "What is the purpose of a milestone?", pt: "Qual o propósito de um marco?" },
       options: [
-        { en: "An agreement defining terms of service", pt: "Um acordo definindo termos de serviço" },
-        { en: "A legal document", pt: "Um documento legal" },
-        { en: "A type of opportunity", pt: "Um tipo de oportunidade" },
-        { en: "A quote", pt: "Uma cotação" }
+        { en: "To track the progress of a case against an SLA", pt: "Acompanhar o progresso de um caso em relação a um SLA" },
+        { en: "To create a list of tasks for a support agent", pt: "Criar uma lista de tarefas para um agente de suporte" },
+        { en: "To store a backup of important case records", pt: "Armazenar um backup de registros de casos importantes" },
+        { en: "To define a sequence of approval steps for a case", pt: "Definir uma sequência de etapas de aprovação para um caso" }
       ],
       correct: 0,
       explanation: { 
-        en: "Contracts are agreements that define the terms of service between your company and customers. They track contract details, terms, and renewal dates.",
-        pt: "Contratos são acordos que definem os termos de serviço entre sua empresa e clientes. Eles rastreiam detalhes do contrato, termos e datas de renovação."
+        en: "A milestone is a required step in your support process. It represents a metric, such as first response time or resolution time, that you want to track. Milestones are added to cases and are used to track the progress of a case against an SLA. By using milestones, you can ensure that you are meeting your service level agreements and providing a high level of customer service.",
+        pt: "Um marco é uma etapa necessária em seu processo de suporte. Ele representa uma métrica, como o tempo da primeira resposta ou o tempo de resolução, que você deseja rastrear. Os marcos são adicionados aos casos e são usados para acompanhar o progresso de um caso em relação a um SLA. Ao usar marcos, você pode garantir que está cumprindo seus acordos de nível de serviço e fornecendo um alto nível de atendimento ao cliente."
       }
     },
     {
       id: 'sc-8',
-      question: { en: "What is an order?", pt: "O que é um pedido?" },
+      question: { en: "What is the purpose of an entitlement?", pt: "Qual o propósito de um direito?" },
       options: [
-        { en: "A customer's request to purchase products or services", pt: "Uma solicitação do cliente para comprar produtos ou serviços" },
-        { en: "A command", pt: "Um comando" },
-        { en: "A type of opportunity", pt: "Um tipo de oportunidade" },
-        { en: "A contract", pt: "Um contrato" }
+        { en: "To define the level of support that a customer is entitled to receive", pt: "Definir o nível de suporte que um cliente tem direito a receber" },
+        { en: "To create a list of tasks for a support agent", pt: "Criar uma lista de tarefas para um agente de suporte" },
+        { en: "To store a backup of important case records", pt: "Armazenar um backup de registros de casos importantes" },
+        { en: "To define a sequence of approval steps for a case", pt: "Definir uma sequência de etapas de aprovação para um caso" }
       ],
       correct: 0,
       explanation: { 
-        en: "Orders represent a customer's request to purchase products or services. They can be created from quotes or opportunities and track order fulfillment.",
-        pt: "Pedidos representam uma solicitação do cliente para comprar produtos ou serviços. Eles podem ser criados a partir de cotações ou oportunidades e rastreiam o cumprimento do pedido."
+        en: "An entitlement is a unit of customer support, such as a phone call or a web case. Entitlements are used to define the level of support that a customer is entitled to receive. For example, you might create an entitlement that gives a customer 10 phone calls per month. By using entitlements, you can ensure that you are providing the right level of support to your customers and that you are not over-servicing them.",
+        pt: "Um direito é uma unidade de suporte ao cliente, como uma ligação telefônica ou um caso da web. Os direitos são usados para definir o nível de suporte que um cliente tem direito a receber. Por exemplo, você pode criar um direito que dá a um cliente 10 ligações telefônicas por mês. Ao usar os direitos, você pode garantir que está fornecendo o nível certo de suporte aos seus clientes e que não está prestando serviços em excesso."
       }
     },
     {
       id: 'sc-9',
-      question: { en: "What is territory management?", pt: "O que é gerenciamento de território?" },
+      question: { en: "What is the purpose of a service contract?", pt: "Qual o propósito de um contrato de serviço?" },
       options: [
-        { en: "A system for organizing accounts and opportunities by geography or other criteria", pt: "Um sistema para organizar contas e oportunidades por geografia ou outros critérios" },
-        { en: "Managing geographical areas", pt: "Gerenciar áreas geográficas" },
-        { en: "A type of role", pt: "Um tipo de função" },
-        { en: "A sharing rule", pt: "Uma regra de compartilhamento" }
+        { en: "To define the terms of a customer's support agreement", pt: "Definir os termos do contrato de suporte de um cliente" },
+        { en: "To create a list of tasks for a support agent", pt: "Criar uma lista de tarefas para um agente de suporte" },
+        { en: "To store a backup of important case records", pt: "Armazenar um backup de registros de casos importantes" },
+        { en: "To define a sequence of approval steps for a case", pt: "Definir uma sequência de etapas de aprovação para um caso" }
       ],
       correct: 0,
       explanation: { 
-        en: "Territory Management is a system for organizing accounts, opportunities, and users by geography, industry, or other criteria to optimize sales coverage.",
-        pt: "Gerenciamento de Território é um sistema para organizar contas, oportunidades e usuários por geografia, indústria ou outros critérios para otimizar a cobertura de vendas."
+        en: "A service contract is a legal agreement between a service provider and a customer that defines the terms of the customer's support agreement. Service contracts typically include information such as the start and end dates of the contract, the level of support that the customer is entitled to receive, and the price of the contract. By using service contracts, you can ensure that you have a clear understanding with your customers about the level of support that you will provide.",
+        pt: "Um contrato de serviço é um acordo legal entre um provedor de serviços e um cliente que define os termos do contrato de suporte do cliente. Os contratos de serviço geralmente incluem informações como as datas de início e término do contrato, o nível de suporte que o cliente tem direito a receber e o preço do contrato. Ao usar contratos de serviço, você pode garantir que tenha um entendimento claro com seus clientes sobre o nível de suporte que fornecerá."
       }
     },
     {
       id: 'sc-10',
-      question: { en: "What is a sales cadence?", pt: "O que é uma cadência de vendas?" },
+      question: { en: "What is a solution?", pt: "O que é uma solução?" },
       options: [
-        { en: "A series of touchpoints with prospects over time", pt: "Uma série de pontos de contato com prospects ao longo do tempo" },
-        { en: "A sales rhythm", pt: "Um ritmo de vendas" },
-        { en: "A type of workflow", pt: "Um tipo de fluxo de trabalho" },
-        { en: "A sales process", pt: "Um processo de vendas" }
+        { en: "To document the resolution of a case", pt: "Documentar a resolução de um caso" },
+        { en: "To create a list of tasks for a support agent", pt: "Criar uma lista de tarefas para um agente de suporte" },
+        { en: "To store a backup of important case records", pt: "Armazenar um backup de registros de casos importantes" },
+        { en: "To define a sequence of approval steps for a case", pt: "Definir uma sequência de etapas de aprovação para um caso" }
       ],
       correct: 0,
       explanation: { 
-        en: "Sales Cadences are series of touchpoints (calls, emails, tasks) with prospects over time. They help sales reps stay organized and follow up consistently.",
-        pt: "Cadências de Vendas são séries de pontos de contato (chamadas, emails, tarefas) com prospects ao longo do tempo. Elas ajudam os representantes de vendas a se manterem organizados e acompanharem consistentemente."
+        en: "A solution is a detailed description of how to resolve a customer's issue. Solutions can be created from cases and can be used by support agents and customers to find answers to common questions. By creating a library of solutions, you can deflect cases, reduce support costs, and improve customer satisfaction.",
+        pt: "Uma solução é uma descrição detalhada de como resolver o problema de um cliente. As soluções podem ser criadas a partir de casos e podem ser usadas por agentes de suporte e clientes para encontrar respostas para perguntas comuns. Ao criar uma biblioteca de soluções, você pode desviar casos, reduzir os custos de suporte e melhorar a satisfação do cliente."
       }
     },
     {
       id: 'sc-11',
-      question: { en: "What is Einstein Opportunity Scoring?", pt: "O que é Pontuação de Oportunidade Einstein?" },
+      question: { en: "What is the purpose of the Service Cloud Console?", pt: "Qual o propósito do Console do Service Cloud?" },
       options: [
-        { en: "AI-powered prediction of opportunity win likelihood", pt: "Previsão com IA da probabilidade de ganho de oportunidade" },
-        { en: "A scoring system", pt: "Um sistema de pontuação" },
-        { en: "A manual scoring tool", pt: "Uma ferramenta de pontuação manual" },
-        { en: "A report type", pt: "Um tipo de relatório" }
+        { en: "To provide a unified interface for support agents to manage cases", pt: "Fornecer uma interface unificada para os agentes de suporte gerenciarem os casos" },
+        { en: "To create custom reports and dashboards", pt: "Criar relatórios e painéis personalizados" },
+        { en: "To manage user permissions and security settings", pt: "Gerenciar permissões de usuário e configurações de segurança" },
+        { en: "To automate complex business processes", pt: "Automatizar processos de negócios complexos" }
       ],
       correct: 0,
       explanation: { 
-        en: "Einstein Opportunity Scoring uses AI to analyze your historical data and predict the likelihood of winning each opportunity, helping prioritize sales efforts.",
-        pt: "Pontuação de Oportunidade Einstein usa IA para analisar seus dados históricos e prever a probabilidade de ganhar cada oportunidade, ajudando a priorizar esforços de vendas."
+        en: "The Service Cloud Console is a unified interface that allows support agents to manage cases more efficiently. It provides a 360-degree view of the customer, so agents have all the information they need to resolve cases quickly and effectively. The console also includes a number of features that help agents to be more productive, such as keyboard shortcuts, macros, and a knowledge base.",
+        pt: "O Console do Service Cloud é uma interface unificada que permite que os agentes de suporte gerenciem os casos de forma mais eficiente. Ele fornece uma visão de 360 graus do cliente, para que os agentes tenham todas as informações de que precisam para resolver os casos de forma rápida e eficaz. O console também inclui vários recursos que ajudam os agentes a serem mais produtivos, como atalhos de teclado, macros e uma base de conhecimento."
       }
     },
     {
       id: 'sc-12',
-      question: { en: "What is a sales path?", pt: "O que é um caminho de vendas?" },
+      question: { en: "What is the purpose of a macro?", pt: "Qual o propósito de uma macro?" },
       options: [
-        { en: "Visual guidance for each stage of your sales process", pt: "Orientação visual para cada estágio do seu processo de vendas" },
-        { en: "A route to sales", pt: "Uma rota para vendas" },
-        { en: "A type of workflow", pt: "Um tipo de fluxo de trabalho" },
-        { en: "A sales territory", pt: "Um território de vendas" }
+        { en: "To automate repetitive tasks", pt: "Automatizar tarefas repetitivas" },
+        { en: "To create a custom report type", pt: "Criar um tipo de relatório personalizado" },
+        { en: "To define a validation rule", pt: "Definir uma regra de validação" },
+        { en: "To create a custom formula field", pt: "Criar um campo de fórmula personalizado" }
       ],
       correct: 0,
       explanation: { 
-        en: "Sales Path provides visual guidance for each stage of your sales process, showing key fields and guidance for success at each opportunity stage.",
-        pt: "Caminho de Vendas fornece orientação visual para cada estágio do seu processo de vendas, mostrando campos-chave e orientação para o sucesso em cada estágio de oportunidade."
+        en: "A macro is a set of instructions that can be used to automate repetitive tasks. For example, you could create a macro that sends an email, updates a case, and closes the case. By using macros, you can save time and improve your productivity. Macros can be run on a single record or on a list of records.",
+        pt: "Uma macro é um conjunto de instruções que podem ser usadas para automatizar tarefas repetitivas. Por exemplo, você pode criar uma macro que envia um e-mail, atualiza um caso e fecha o caso. Ao usar macros, você pode economizar tempo e melhorar sua produtividade. As macros podem ser executadas em um único registro ou em uma lista de registros."
       }
     },
     {
       id: 'sc-13',
-      question: { en: "What is collaborative forecasting?", pt: "O que é previsão colaborativa?" },
+      question: { en: "What is the purpose of a quick text?", pt: "Qual o propósito de um texto rápido?" },
       options: [
-        { en: "A tool for predicting future sales revenue", pt: "Uma ferramenta para prever receita de vendas futura" },
-        { en: "Weather forecasting", pt: "Previsão do tempo" },
-        { en: "A type of report", pt: "Um tipo de relatório" },
-        { en: "A dashboard", pt: "Um painel" }
+        { en: "To insert predefined text into emails, chats, and other messages", pt: "Inserir texto predefinido em e-mails, bate-papos e outras mensagens" },
+        { en: "To create a custom report type", pt: "Criar um tipo de relatório personalizado" },
+        { en: "To define a validation rule", pt: "Definir uma regra de validação" },
+        { en: "To create a custom formula field", pt: "Criar um campo de fórmula personalizado" }
       ],
       correct: 0,
       explanation: { 
-        en: "Collaborative Forecasting allows sales teams to predict future revenue, track quota attainment, and adjust forecasts collaboratively across the organization.",
-        pt: "Previsão Colaborativa permite que equipes de vendas prevejam receita futura, rastreiem o cumprimento de cotas e ajustem previsões colaborativamente em toda a organização."
+        en: "Quick text is a feature that allows you to insert predefined text into emails, chats, and other messages. This can save you time and improve your productivity. For example, you could create a quick text message that includes a greeting, a link to a knowledge base article, and a closing. By using quick text, you can ensure that your messages are consistent and accurate.",
+        pt: "O texto rápido é um recurso que permite inserir texto predefinido em e-mails, bate-papos e outras mensagens. Isso pode economizar tempo e melhorar sua produtividade. Por exemplo, você pode criar uma mensagem de texto rápido que inclua uma saudação, um link para um artigo da base de conhecimento e um encerramento. Ao usar o texto rápido, você pode garantir que suas mensagens sejam consistentes e precisas."
       }
     },
     {
       id: 'sc-14',
-      question: { en: "What is a contact role on an opportunity?", pt: "O que é uma função de contato em uma oportunidade?" },
+      question: { en: "What is the purpose of an email template?", pt: "Qual o propósito de um modelo de e-mail?" },
       options: [
-        { en: "Defines the role a contact plays in an opportunity", pt: "Define o papel que um contato desempenha em uma oportunidade" },
-        { en: "A type of contact", pt: "Um tipo de contato" },
-        { en: "A job title", pt: "Um cargo" },
-        { en: "A user role", pt: "Uma função de usuário" }
+        { en: "To create a standardized email message", pt: "Criar uma mensagem de e-mail padronizada" },
+        { en: "To create a custom report type", pt: "Criar um tipo de relatório personalizado" },
+        { en: "To define a validation rule", pt: "Definir uma regra de validação" },
+        { en: "To create a custom formula field", pt: "Criar um campo de fórmula personalizado" }
       ],
       correct: 0,
       explanation: { 
-        en: "Contact Roles define the role each contact plays in an opportunity (e.g., Decision Maker, Influencer). This helps track who's involved in the deal.",
-        pt: "Funções de Contato definem o papel que cada contato desempenha em uma oportunidade (por exemplo, Tomador de Decisão, Influenciador). Isso ajuda a rastrear quem está envolvido no negócio."
+        en: "An email template is a preformatted email that you can use to create a standardized email message. Email templates can include text, images, and merge fields. By using email templates, you can save time and ensure that your email messages are consistent and accurate.",
+        pt: "Um modelo de e-mail é um e-mail pré-formatado que você pode usar para criar uma mensagem de e-mail padronizada. Os modelos de e-mail podem incluir texto, imagens e campos de mesclagem. Ao usar modelos de e-mail, você pode economizar tempo e garantir que suas mensagens de e-mail sejam consistentes e precisas."
       }
     },
     {
       id: 'sc-15',
-      question: { en: "What is opportunity team selling?", pt: "O que é venda em equipe de oportunidade?" },
+      question: { en: "What is Email Studio?", pt: "O que é o Email Studio?" },
       options: [
-        { en: "Allows multiple sales reps to work together on an opportunity", pt: "Permite que múltiplos representantes de vendas trabalhem juntos em uma oportunidade" },
-        { en: "A sales team", pt: "Uma equipe de vendas" },
-        { en: "A type of territory", pt: "Um tipo de território" },
-        { en: "A sharing rule", pt: "Uma regra de compartilhamento" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Opportunity Team Selling allows multiple sales reps to collaborate on an opportunity, each with defined roles and split credit for the sale.",
-        pt: "Venda em Equipe de Oportunidade permite que múltiplos representantes de vendas colaborem em uma oportunidade, cada um com funções definidas e crédito dividido pela venda."
-      }
-    }
-  ],
-  'marketing': [
-    {
-      id: 'mc-1',
-      question: { en: "What is a Journey in Marketing Cloud?", pt: "O que é uma Jornada no Marketing Cloud?" },
-      options: [
-        { en: "An automated customer engagement path", pt: "Um caminho automatizado de engajamento do cliente" },
-        { en: "A type of email template", pt: "Um tipo de template de email" },
-        { en: "A reporting dashboard", pt: "Um painel de relatórios" },
-        { en: "A data extension", pt: "Uma extensão de dados" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Journey Builder creates automated, multi-step customer engagement paths that respond to customer behavior and preferences.",
-        pt: "Journey Builder cria caminhos automatizados de engajamento do cliente em múltiplas etapas que respondem ao comportamento e preferências do cliente."
-      }
-    },
-    {
-      id: 'mc-2',
-      question: { en: "What is a data extension?", pt: "O que é uma extensão de dados?" },
-      options: [
-        { en: "A table that stores data in Marketing Cloud", pt: "Uma tabela que armazena dados no Marketing Cloud" },
-        { en: "A file extension", pt: "Uma extensão de arquivo" },
-        { en: "A data type", pt: "Um tipo de dado" },
-        { en: "A database", pt: "Um banco de dados" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Data Extensions are tables within Marketing Cloud that store data. They're more flexible than lists and can store any type of data.",
-        pt: "Extensões de Dados são tabelas dentro do Marketing Cloud que armazenam dados. Elas são mais flexíveis que listas e podem armazenar qualquer tipo de dado."
-      }
-    },
-    {
-      id: 'mc-3',
-      question: { en: "What is Email Studio?", pt: "O que é Email Studio?" },
-      options: [
-        { en: "A tool for creating and sending email campaigns", pt: "Uma ferramenta para criar e enviar campanhas de email" },
-        { en: "An email client", pt: "Um cliente de email" },
-        { en: "An email server", pt: "Um servidor de email" },
+        { en: "A tool for creating and sending email campaigns", pt: "Uma ferramenta para criar e enviar campanhas de e-mail" },
+        { en: "An email client", pt: "Um cliente de e-mail" },
+        { en: "An email server", pt: "Um servidor de e-mail" },
         { en: "A design tool", pt: "Uma ferramenta de design" }
       ],
       correct: 0,
       explanation: { 
-        en: "Email Studio is Marketing Cloud's email marketing tool for creating, sending, and tracking email campaigns with advanced personalization.",
-        pt: "Email Studio é a ferramenta de email marketing do Marketing Cloud para criar, enviar e rastrear campanhas de email com personalização avançada."
-      }
-    },
-    {
-      id: 'mc-4',
-      question: { en: "What is Mobile Studio?", pt: "O que é Mobile Studio?" },
-      options: [
-        { en: "A tool for SMS and push notification campaigns", pt: "Uma ferramenta para campanhas de SMS e notificações push" },
-        { en: "A mobile app", pt: "Um aplicativo móvel" },
-        { en: "A mobile website builder", pt: "Um construtor de sites móveis" },
-        { en: "A mobile testing tool", pt: "Uma ferramenta de teste móvel" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Mobile Studio enables SMS, MMS, push notifications, and group messaging campaigns to engage customers on mobile devices.",
-        pt: "Mobile Studio permite campanhas de SMS, MMS, notificações push e mensagens em grupo para engajar clientes em dispositivos móveis."
-      }
-    },
-    {
-      id: 'mc-5',
-      question: { en: "What is Social Studio?", pt: "O que é Social Studio?" },
-      options: [
-        { en: "A tool for social media marketing and listening", pt: "Uma ferramenta para marketing e escuta de mídia social" },
-        { en: "A social network", pt: "Uma rede social" },
-        { en: "A social media platform", pt: "Uma plataforma de mídia social" },
-        { en: "A design tool", pt: "Uma ferramenta de design" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Social Studio helps manage social media marketing, publishing, engagement, and social listening across multiple social networks.",
-        pt: "Social Studio ajuda a gerenciar marketing de mídia social, publicação, engajamento e escuta social em múltiplas redes sociais."
-      }
-    },
-    {
-      id: 'mc-6',
-      question: { en: "What is Advertising Studio?", pt: "O que é Advertising Studio?" },
-      options: [
-        { en: "A tool for managing digital advertising campaigns", pt: "Uma ferramenta para gerenciar campanhas de publicidade digital" },
-        { en: "An advertising agency", pt: "Uma agência de publicidade" },
-        { en: "A design tool", pt: "Uma ferramenta de design" },
-        { en: "A reporting tool", pt: "Uma ferramenta de relatórios" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Advertising Studio enables you to create and manage digital advertising campaigns across platforms like Facebook, Google, and LinkedIn using CRM data.",
-        pt: "Advertising Studio permite criar e gerenciar campanhas de publicidade digital em plataformas como Facebook, Google e LinkedIn usando dados de CRM."
-      }
-    },
-    {
-      id: 'mc-7',
-      question: { en: "What is Content Builder?", pt: "O que é Content Builder?" },
-      options: [
-        { en: "A tool for creating and managing marketing content", pt: "Uma ferramenta para criar e gerenciar conteúdo de marketing" },
-        { en: "A website builder", pt: "Um construtor de sites" },
-        { en: "A text editor", pt: "Um editor de texto" },
-        { en: "A design tool", pt: "Uma ferramenta de design" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Content Builder is a centralized tool for creating, managing, and sharing marketing content across all Marketing Cloud channels.",
-        pt: "Content Builder é uma ferramenta centralizada para criar, gerenciar e compartilhar conteúdo de marketing em todos os canais do Marketing Cloud."
-      }
-    },
-    {
-      id: 'mc-8',
-      question: { en: "What is AMPscript?", pt: "O que é AMPscript?" },
-      options: [
-        { en: "A scripting language for personalizing content", pt: "Uma linguagem de script para personalizar conteúdo" },
-        { en: "A programming language", pt: "Uma linguagem de programação" },
-        { en: "A markup language", pt: "Uma linguagem de marcação" },
-        { en: "A database query language", pt: "Uma linguagem de consulta de banco de dados" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "AMPscript is Marketing Cloud's proprietary scripting language used to personalize email and landing page content dynamically.",
-        pt: "AMPscript é a linguagem de script proprietária do Marketing Cloud usada para personalizar conteúdo de email e páginas de destino dinamicamente."
-      }
-    },
-    {
-      id: 'mc-9',
-      question: { en: "What is a subscriber in Marketing Cloud?", pt: "O que é um assinante no Marketing Cloud?" },
-      options: [
-        { en: "A person who has opted in to receive communications", pt: "Uma pessoa que optou por receber comunicações" },
-        { en: "A paying customer", pt: "Um cliente pagante" },
-        { en: "A user account", pt: "Uma conta de usuário" },
-        { en: "A contact", pt: "Um contato" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Subscribers are individuals who have opted in to receive communications from your organization. They're identified by a unique subscriber key.",
-        pt: "Assinantes são indivíduos que optaram por receber comunicações da sua organização. Eles são identificados por uma chave de assinante única."
-      }
-    },
-    {
-      id: 'mc-10',
-      question: { en: "What is a send classification?", pt: "O que é uma classificação de envio?" },
-      options: [
-        { en: "Defines sender profile and delivery settings", pt: "Define perfil do remetente e configurações de entrega" },
-        { en: "A type of email", pt: "Um tipo de email" },
-        { en: "A classification system", pt: "Um sistema de classificação" },
-        { en: "A sending method", pt: "Um método de envio" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Send Classifications define sender profile, delivery profile, and CAN-SPAM classification for email sends, ensuring compliance and consistency.",
-        pt: "Classificações de Envio definem perfil do remetente, perfil de entrega e classificação CAN-SPAM para envios de email, garantindo conformidade e consistência."
-      }
-    },
-    {
-      id: 'mc-11',
-      question: { en: "What is Einstein Engagement Scoring?", pt: "O que é Pontuação de Engajamento Einstein?" },
-      options: [
-        { en: "AI-powered prediction of email engagement likelihood", pt: "Previsão com IA da probabilidade de engajamento de email" },
-        { en: "A scoring system", pt: "Um sistema de pontuação" },
-        { en: "A manual scoring tool", pt: "Uma ferramenta de pontuação manual" },
-        { en: "A report type", pt: "Um tipo de relatório" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Einstein Engagement Scoring uses AI to predict how likely each subscriber is to engage with your emails, helping optimize send times and targeting.",
-        pt: "Pontuação de Engajamento Einstein usa IA para prever a probabilidade de cada assinante engajar com seus emails, ajudando a otimizar horários de envio e segmentação."
-      }
-    },
-    {
-      id: 'mc-12',
-      question: { en: "What is a triggered send?", pt: "O que é um envio acionado?" },
-      options: [
-        { en: "An automated email sent based on a specific event", pt: "Um email automatizado enviado com base em um evento específico" },
-        { en: "A manual send", pt: "Um envio manual" },
-        { en: "A scheduled send", pt: "Um envio agendado" },
-        { en: "A test send", pt: "Um envio de teste" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Triggered Sends are automated emails sent in response to specific events or actions, like welcome emails or password resets.",
-        pt: "Envios Acionados são emails automatizados enviados em resposta a eventos ou ações específicas, como emails de boas-vindas ou redefinições de senha."
-      }
-    },
-    {
-      id: 'mc-13',
-      question: { en: "What is a suppression list?", pt: "O que é uma lista de supressão?" },
-      options: [
-        { en: "A list of subscribers who should not receive emails", pt: "Uma lista de assinantes que não devem receber emails" },
-        { en: "A blacklist", pt: "Uma lista negra" },
-        { en: "A spam list", pt: "Uma lista de spam" },
-        { en: "A deletion list", pt: "Uma lista de exclusão" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Suppression Lists contain subscribers who should not receive certain types of communications, helping maintain compliance and respect preferences.",
-        pt: "Listas de Supressão contêm assinantes que não devem receber certos tipos de comunicações, ajudando a manter conformidade e respeitar preferências."
-      }
-    },
-    {
-      id: 'mc-14',
-      question: { en: "What is a publication list?", pt: "O que é uma lista de publicação?" },
-      options: [
-        { en: "A list subscribers can opt in or out of", pt: "Uma lista da qual assinantes podem optar por participar ou sair" },
-        { en: "A publishing schedule", pt: "Um cronograma de publicação" },
-        { en: "A type of report", pt: "Um tipo de relatório" },
-        { en: "A content list", pt: "Uma lista de conteúdo" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Publication Lists allow subscribers to manage their email preferences by opting in or out of specific types of communications.",
-        pt: "Listas de Publicação permitem que assinantes gerenciem suas preferências de email optando por participar ou sair de tipos específicos de comunicações."
-      }
-    },
-    {
-      id: 'mc-15',
-      question: { en: "What is Interaction Studio?", pt: "O que é Interaction Studio?" },
-      options: [
-        { en: "A real-time personalization and interaction management tool", pt: "Uma ferramenta de personalização e gerenciamento de interação em tempo real" },
-        { en: "A design tool", pt: "Uma ferramenta de design" },
-        { en: "A testing tool", pt: "Uma ferramenta de teste" },
-        { en: "A reporting tool", pt: "Uma ferramenta de relatórios" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Interaction Studio (formerly Evergage) provides real-time personalization and interaction management across web, mobile, and email channels.",
-        pt: "Interaction Studio (anteriormente Evergage) fornece personalização em tempo real e gerenciamento de interação em canais web, móvel e email."
-      }
-    }
-  ],
-  'agentforce': [
-    {
-      id: 'af-1',
-      question: { en: "What is Agentforce primarily used for?", pt: "Para que o Agentforce é usado principalmente?" },
-      options: [
-        { en: "AI-powered autonomous agents", pt: "Agentes autônomos com IA" },
-        { en: "Data backup", pt: "Backup de dados" },
-        { en: "Email marketing", pt: "Marketing por email" },
-        { en: "Report generation", pt: "Geração de relatórios" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Agentforce enables AI-powered autonomous agents that can handle tasks, make decisions, and take actions on behalf of users.",
-        pt: "Agentforce habilita agentes autônomos com IA que podem lidar com tarefas, tomar decisões e executar ações em nome dos usuários."
-      }
-    },
-    {
-      id: 'af-2',
-      question: { en: "What type of AI does Agentforce use?", pt: "Que tipo de IA o Agentforce usa?" },
-      options: [
-        { en: "Generative AI and Machine Learning", pt: "IA Generativa e Aprendizado de Máquina" },
-        { en: "Rule-based AI only", pt: "Apenas IA baseada em regras" },
-        { en: "Simple automation", pt: "Automação simples" },
-        { en: "No AI", pt: "Sem IA" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Agentforce leverages both Generative AI and Machine Learning to create intelligent, adaptive agents that can understand context and make decisions.",
-        pt: "Agentforce aproveita tanto IA Generativa quanto Aprendizado de Máquina para criar agentes inteligentes e adaptativos que podem entender contexto e tomar decisões."
-      }
-    },
-    {
-      id: 'af-3',
-      question: { en: "What is an agent action in Agentforce?", pt: "O que é uma ação de agente no Agentforce?" },
-      options: [
-        { en: "A specific task the agent can perform", pt: "Uma tarefa específica que o agente pode executar" },
-        { en: "A user action", pt: "Uma ação de usuário" },
-        { en: "A workflow step", pt: "Um passo de fluxo de trabalho" },
-        { en: "A report action", pt: "Uma ação de relatório" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Agent Actions are specific tasks that Agentforce agents can perform, such as creating records, sending emails, or updating data.",
-        pt: "Ações de Agente são tarefas específicas que agentes Agentforce podem executar, como criar registros, enviar emails ou atualizar dados."
-      }
-    },
-    {
-      id: 'af-4',
-      question: { en: "How does Agentforce learn from interactions?", pt: "Como o Agentforce aprende com interações?" },
-      options: [
-        { en: "Through continuous feedback and data analysis", pt: "Através de feedback contínuo e análise de dados" },
-        { en: "Manual programming only", pt: "Apenas programação manual" },
-        { en: "It doesn't learn", pt: "Não aprende" },
-        { en: "Random selection", pt: "Seleção aleatória" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Agentforce agents learn and improve through continuous feedback, data analysis, and machine learning algorithms that adapt to patterns and outcomes.",
-        pt: "Agentes Agentforce aprendem e melhoram através de feedback contínuo, análise de dados e algoritmos de aprendizado de máquina que se adaptam a padrões e resultados."
-      }
-    },
-    {
-      id: 'af-5',
-      question: { en: "What is agent reasoning in Agentforce?", pt: "O que é raciocínio de agente no Agentforce?" },
-      options: [
-        { en: "The agent's ability to analyze context and make decisions", pt: "A capacidade do agente de analisar contexto e tomar decisões" },
-        { en: "A logical operator", pt: "Um operador lógico" },
-        { en: "A validation rule", pt: "Uma regra de validação" },
-        { en: "A workflow rule", pt: "Uma regra de fluxo de trabalho" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Agent Reasoning is the AI capability that allows agents to analyze context, understand intent, and make intelligent decisions based on available data.",
-        pt: "Raciocínio de Agente é a capacidade de IA que permite aos agentes analisar contexto, entender intenção e tomar decisões inteligentes baseadas em dados disponíveis."
-      }
-    },
-    {
-      id: 'af-6',
-      question: { en: "What is an agent topic in Agentforce?", pt: "O que é um tópico de agente no Agentforce?" },
-      options: [
-        { en: "A category of tasks the agent specializes in", pt: "Uma categoria de tarefas em que o agente se especializa" },
-        { en: "A discussion topic", pt: "Um tópico de discussão" },
-        { en: "A knowledge article", pt: "Um artigo de conhecimento" },
-        { en: "A report category", pt: "Uma categoria de relatório" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Agent Topics define categories of tasks or domains that an agent specializes in, helping organize and route work appropriately.",
-        pt: "Tópicos de Agente definem categorias de tarefas ou domínios em que um agente se especializa, ajudando a organizar e rotear trabalho apropriadamente."
-      }
-    },
-    {
-      id: 'af-7',
-      question: { en: "How does Agentforce integrate with Salesforce data?", pt: "Como o Agentforce se integra com dados do Salesforce?" },
-      options: [
-        { en: "Native integration with all Salesforce objects and data", pt: "Integração nativa com todos os objetos e dados do Salesforce" },
-        { en: "Manual data export only", pt: "Apenas exportação manual de dados" },
-        { en: "No integration", pt: "Sem integração" },
-        { en: "API calls only", pt: "Apenas chamadas de API" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Agentforce has native integration with Salesforce, allowing agents to access and manipulate all Salesforce objects and data seamlessly.",
-        pt: "Agentforce tem integração nativa com Salesforce, permitindo que agentes acessem e manipulem todos os objetos e dados do Salesforce perfeitamente."
-      }
-    },
-    {
-      id: 'af-8',
-      question: { en: "What is agent handoff?", pt: "O que é transferência de agente?" },
-      options: [
-        { en: "Transferring a task from AI agent to human agent", pt: "Transferir uma tarefa de agente IA para agente humano" },
-        { en: "Changing agents", pt: "Trocar agentes" },
-        { en: "Ending a conversation", pt: "Encerrar uma conversa" },
-        { en: "Starting a new task", pt: "Iniciar uma nova tarefa" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Agent Handoff is the process of seamlessly transferring a task or conversation from an AI agent to a human agent when needed.",
-        pt: "Transferência de Agente é o processo de transferir perfeitamente uma tarefa ou conversa de um agente IA para um agente humano quando necessário."
-      }
-    },
-    {
-      id: 'af-9',
-      question: { en: "What is agent training in Agentforce?", pt: "O que é treinamento de agente no Agentforce?" },
-      options: [
-        { en: "Providing examples and feedback to improve agent performance", pt: "Fornecer exemplos e feedback para melhorar o desempenho do agente" },
-        { en: "User training", pt: "Treinamento de usuário" },
-        { en: "Manual programming", pt: "Programação manual" },
-        { en: "Documentation", pt: "Documentação" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Agent Training involves providing examples, feedback, and corrections to help AI agents learn and improve their performance over time.",
-        pt: "Treinamento de Agente envolve fornecer exemplos, feedback e correções para ajudar agentes IA a aprender e melhorar seu desempenho ao longo do tempo."
-      }
-    },
-    {
-      id: 'af-10',
-      question: { en: "What is agent analytics?", pt: "O que é análise de agente?" },
-      options: [
-        { en: "Metrics and insights about agent performance", pt: "Métricas e insights sobre desempenho do agente" },
-        { en: "User analytics", pt: "Análise de usuário" },
-        { en: "Data analytics", pt: "Análise de dados" },
-        { en: "Report analytics", pt: "Análise de relatório" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Agent Analytics provides metrics and insights about agent performance, including success rates, response times, and user satisfaction.",
-        pt: "Análise de Agente fornece métricas e insights sobre desempenho do agente, incluindo taxas de sucesso, tempos de resposta e satisfação do usuário."
-      }
-    },
-    {
-      id: 'af-11',
-      question: { en: "What is conversational AI in Agentforce?", pt: "O que é IA conversacional no Agentforce?" },
-      options: [
-        { en: "Natural language understanding and generation", pt: "Compreensão e geração de linguagem natural" },
-        { en: "Chat functionality", pt: "Funcionalidade de chat" },
-        { en: "Voice recognition", pt: "Reconhecimento de voz" },
-        { en: "Text messaging", pt: "Mensagens de texto" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Conversational AI enables agents to understand and generate natural language, allowing for human-like interactions with users.",
-        pt: "IA Conversacional permite que agentes entendam e gerem linguagem natural, permitindo interações semelhantes a humanos com usuários."
-      }
-    },
-    {
-      id: 'af-12',
-      question: { en: "What is agent orchestration?", pt: "O que é orquestração de agente?" },
-      options: [
-        { en: "Coordinating multiple agents to work together", pt: "Coordenar múltiplos agentes para trabalhar juntos" },
-        { en: "Music for agents", pt: "Música para agentes" },
-        { en: "Agent scheduling", pt: "Agendamento de agente" },
-        { en: "Workflow management", pt: "Gerenciamento de fluxo de trabalho" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Agent Orchestration coordinates multiple AI agents to work together on complex tasks, each handling their specialized domain.",
-        pt: "Orquestração de Agente coordena múltiplos agentes IA para trabalhar juntos em tarefas complexas, cada um lidando com seu domínio especializado."
-      }
-    },
-    {
-      id: 'af-13',
-      question: { en: "What is agent memory?", pt: "O que é memória de agente?" },
-      options: [
-        { en: "The agent's ability to remember context across interactions", pt: "A capacidade do agente de lembrar contexto entre interações" },
-        { en: "Storage capacity", pt: "Capacidade de armazenamento" },
-        { en: "Database memory", pt: "Memória de banco de dados" },
-        { en: "Cache memory", pt: "Memória cache" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Agent Memory allows AI agents to remember context, previous interactions, and user preferences across multiple conversations.",
-        pt: "Memória de Agente permite que agentes IA lembrem contexto, interações anteriores e preferências do usuário em múltiplas conversas."
-      }
-    },
-    {
-      id: 'af-14',
-      question: { en: "What is agent personalization?", pt: "O que é personalização de agente?" },
-      options: [
-        { en: "Tailoring agent responses based on user data and preferences", pt: "Adaptar respostas do agente com base em dados e preferências do usuário" },
-        { en: "Customizing agent appearance", pt: "Personalizar aparência do agente" },
-        { en: "User customization", pt: "Personalização de usuário" },
-        { en: "Theme customization", pt: "Personalização de tema" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Agent Personalization tailors responses and actions based on individual user data, preferences, and interaction history.",
-        pt: "Personalização de Agente adapta respostas e ações com base em dados individuais do usuário, preferências e histórico de interação."
-      }
-    },
-    {
-      id: 'af-15',
-      question: { en: "What is agent escalation?", pt: "O que é escalação de agente?" },
-      options: [
-        { en: "Routing complex issues to specialized agents or humans", pt: "Rotear problemas complexos para agentes especializados ou humanos" },
-        { en: "Increasing agent priority", pt: "Aumentar prioridade do agente" },
-        { en: "Escalating to management", pt: "Escalar para gerência" },
-        { en: "Raising ticket priority", pt: "Aumentar prioridade do ticket" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Agent Escalation automatically routes complex or sensitive issues to specialized AI agents or human agents when needed.",
-        pt: "Escalação de Agente roteia automaticamente problemas complexos ou sensíveis para agentes IA especializados ou agentes humanos quando necessário."
-      }
-    }
-  ],
-  'data-cloud': [
-    {
-      id: 'dc-1',
-      question: { en: "What is the primary purpose of Data Cloud?", pt: "Qual é o propósito principal do Data Cloud?" },
-      options: [
-        { en: "Unify customer data from multiple sources", pt: "Unificar dados de clientes de múltiplas fontes" },
-        { en: "Store email templates", pt: "Armazenar templates de email" },
-        { en: "Manage user permissions", pt: "Gerenciar permissões de usuário" },
-        { en: "Create reports", pt: "Criar relatórios" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Data Cloud unifies customer data from multiple sources into a single, comprehensive view, enabling better insights and personalization.",
-        pt: "Data Cloud unifica dados de clientes de múltiplas fontes em uma única visão abrangente, permitindo melhores insights e personalização."
-      }
-    },
-    {
-      id: 'dc-2',
-      question: { en: "What is a data stream in Data Cloud?", pt: "O que é um fluxo de dados no Data Cloud?" },
-      options: [
-        { en: "A continuous flow of data from a source", pt: "Um fluxo contínuo de dados de uma fonte" },
-        { en: "A data river", pt: "Um rio de dados" },
-        { en: "A type of report", pt: "Um tipo de relatório" },
-        { en: "A data export", pt: "Uma exportação de dados" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Data Streams are continuous flows of data from various sources into Data Cloud, enabling real-time data ingestion and processing.",
-        pt: "Fluxos de Dados são fluxos contínuos de dados de várias fontes para o Data Cloud, permitindo ingestão e processamento de dados em tempo real."
-      }
-    },
-    {
-      id: 'dc-3',
-      question: { en: "What is data harmonization?", pt: "O que é harmonização de dados?" },
-      options: [
-        { en: "Standardizing data from different sources into a common format", pt: "Padronizar dados de diferentes fontes em um formato comum" },
-        { en: "Making data sound good", pt: "Fazer dados soarem bem" },
-        { en: "Data synchronization", pt: "Sincronização de dados" },
-        { en: "Data cleaning", pt: "Limpeza de dados" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Data Harmonization standardizes data from different sources into a common format, making it easier to analyze and use across systems.",
-        pt: "Harmonização de Dados padroniza dados de diferentes fontes em um formato comum, facilitando a análise e uso em sistemas."
-      }
-    },
-    {
-      id: 'dc-4',
-      question: { en: "What is identity resolution?", pt: "O que é resolução de identidade?" },
-      options: [
-        { en: "Matching and merging records that belong to the same individual", pt: "Combinar e mesclar registros que pertencem ao mesmo indivíduo" },
-        { en: "User authentication", pt: "Autenticação de usuário" },
-        { en: "Password recovery", pt: "Recuperação de senha" },
-        { en: "Identity verification", pt: "Verificação de identidade" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Identity Resolution matches and merges records from different sources that belong to the same individual, creating a unified customer profile.",
-        pt: "Resolução de Identidade combina e mescla registros de diferentes fontes que pertencem ao mesmo indivíduo, criando um perfil unificado de cliente."
-      }
-    },
-    {
-      id: 'dc-5',
-      question: { en: "What is a unified profile?", pt: "O que é um perfil unificado?" },
-      options: [
-        { en: "A single, comprehensive view of a customer", pt: "Uma visão única e abrangente de um cliente" },
-        { en: "A user profile", pt: "Um perfil de usuário" },
-        { en: "A social media profile", pt: "Um perfil de mídia social" },
-        { en: "A company profile", pt: "Um perfil de empresa" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Unified Profiles combine data from multiple sources to create a single, comprehensive view of each customer across all touchpoints.",
-        pt: "Perfis Unificados combinam dados de múltiplas fontes para criar uma visão única e abrangente de cada cliente em todos os pontos de contato."
-      }
-    },
-    {
-      id: 'dc-6',
-      question: { en: "What is data segmentation in Data Cloud?", pt: "O que é segmentação de dados no Data Cloud?" },
-      options: [
-        { en: "Grouping customers based on shared characteristics", pt: "Agrupar clientes com base em características compartilhadas" },
-        { en: "Dividing data into parts", pt: "Dividir dados em partes" },
-        { en: "Data partitioning", pt: "Particionamento de dados" },
-        { en: "Data filtering", pt: "Filtragem de dados" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Data Segmentation groups customers based on shared characteristics, behaviors, or attributes for targeted marketing and personalization.",
-        pt: "Segmentação de Dados agrupa clientes com base em características, comportamentos ou atributos compartilhados para marketing direcionado e personalização."
-      }
-    },
-    {
-      id: 'dc-7',
-      question: { en: "What is real-time activation?", pt: "O que é ativação em tempo real?" },
-      options: [
-        { en: "Using data immediately as it's collected", pt: "Usar dados imediatamente conforme são coletados" },
-        { en: "Activating features", pt: "Ativar recursos" },
-        { en: "Real-time reporting", pt: "Relatórios em tempo real" },
-        { en: "Live streaming", pt: "Transmissão ao vivo" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Real-Time Activation allows you to use customer data immediately as it's collected to trigger personalized experiences and actions.",
-        pt: "Ativação em Tempo Real permite usar dados de clientes imediatamente conforme são coletados para acionar experiências e ações personalizadas."
-      }
-    },
-    {
-      id: 'dc-8',
-      question: { en: "What is a data model in Data Cloud?", pt: "O que é um modelo de dados no Data Cloud?" },
-      options: [
-        { en: "The structure and relationships of data objects", pt: "A estrutura e relacionamentos de objetos de dados" },
-        { en: "A data template", pt: "Um modelo de dados" },
-        { en: "A database schema", pt: "Um esquema de banco de dados" },
-        { en: "A data type", pt: "Um tipo de dado" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Data Models define the structure, relationships, and attributes of data objects in Data Cloud, providing a framework for data organization.",
-        pt: "Modelos de Dados definem a estrutura, relacionamentos e atributos de objetos de dados no Data Cloud, fornecendo uma estrutura para organização de dados."
-      }
-    },
-    {
-      id: 'dc-9',
-      question: { en: "What is data enrichment?", pt: "O que é enriquecimento de dados?" },
-      options: [
-        { en: "Adding additional information to existing data", pt: "Adicionar informações adicionais a dados existentes" },
-        { en: "Making data richer", pt: "Tornar dados mais ricos" },
-        { en: "Data validation", pt: "Validação de dados" },
-        { en: "Data cleaning", pt: "Limpeza de dados" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Data Enrichment adds additional information from external sources to existing customer data, providing deeper insights and context.",
-        pt: "Enriquecimento de Dados adiciona informações adicionais de fontes externas a dados existentes de clientes, fornecendo insights e contexto mais profundos."
-      }
-    },
-    {
-      id: 'dc-10',
-      question: { en: "What is a calculated insight?", pt: "O que é um insight calculado?" },
-      options: [
-        { en: "A metric derived from customer data", pt: "Uma métrica derivada de dados de clientes" },
-        { en: "A calculation", pt: "Um cálculo" },
-        { en: "A formula field", pt: "Um campo fórmula" },
-        { en: "A report metric", pt: "Uma métrica de relatório" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Calculated Insights are metrics derived from customer data, such as lifetime value, engagement scores, or propensity models.",
-        pt: "Insights Calculados são métricas derivadas de dados de clientes, como valor vitalício, pontuações de engajamento ou modelos de propensão."
-      }
-    },
-    {
-      id: 'dc-11',
-      question: { en: "What is data federation?", pt: "O que é federação de dados?" },
-      options: [
-        { en: "Accessing data from multiple sources without moving it", pt: "Acessar dados de múltiplas fontes sem movê-los" },
-        { en: "Data governance", pt: "Governança de dados" },
-        { en: "Data replication", pt: "Replicação de dados" },
-        { en: "Data migration", pt: "Migração de dados" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Data Federation allows you to access and query data from multiple sources without physically moving or copying it into Data Cloud.",
-        pt: "Federação de Dados permite acessar e consultar dados de múltiplas fontes sem movê-los ou copiá-los fisicamente para o Data Cloud."
-      }
-    },
-    {
-      id: 'dc-12',
-      question: { en: "What is a data action?", pt: "O que é uma ação de dados?" },
-      options: [
-        { en: "An automated action triggered by data conditions", pt: "Uma ação automatizada acionada por condições de dados" },
-        { en: "A data operation", pt: "Uma operação de dados" },
-        { en: "A workflow action", pt: "Uma ação de fluxo de trabalho" },
-        { en: "A data export", pt: "Uma exportação de dados" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Data Actions are automated actions triggered when specific data conditions are met, enabling real-time responses to customer behavior.",
-        pt: "Ações de Dados são ações automatizadas acionadas quando condições específicas de dados são atendidas, permitindo respostas em tempo real ao comportamento do cliente."
-      }
-    },
-    {
-      id: 'dc-13',
-      question: { en: "What is data lineage?", pt: "O que é linhagem de dados?" },
-      options: [
-        { en: "Tracking the origin and transformations of data", pt: "Rastrear a origem e transformações de dados" },
-        { en: "Data history", pt: "Histórico de dados" },
-        { en: "Data ancestry", pt: "Ancestralidade de dados" },
-        { en: "Data versioning", pt: "Versionamento de dados" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Data Lineage tracks the origin, movement, and transformations of data throughout its lifecycle, ensuring transparency and compliance.",
-        pt: "Linhagem de Dados rastreia a origem, movimento e transformações de dados ao longo de seu ciclo de vida, garantindo transparência e conformidade."
-      }
-    },
-    {
-      id: 'dc-14',
-      question: { en: "What is consent management in Data Cloud?", pt: "O que é gerenciamento de consentimento no Data Cloud?" },
-      options: [
-        { en: "Managing customer data privacy preferences", pt: "Gerenciar preferências de privacidade de dados de clientes" },
-        { en: "User permissions", pt: "Permissões de usuário" },
-        { en: "Data access control", pt: "Controle de acesso a dados" },
-        { en: "Security settings", pt: "Configurações de segurança" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Consent Management tracks and honors customer data privacy preferences, ensuring compliance with regulations like GDPR and CCPA.",
-        pt: "Gerenciamento de Consentimento rastreia e honra preferências de privacidade de dados de clientes, garantindo conformidade com regulamentos como GDPR e CCPA."
-      }
-    },
-    {
-      id: 'dc-15',
-      question: { en: "What is predictive analytics in Data Cloud?", pt: "O que é análise preditiva no Data Cloud?" },
-      options: [
-        { en: "Using AI to predict future customer behavior", pt: "Usar IA para prever comportamento futuro de clientes" },
-        { en: "Forecasting", pt: "Previsão" },
-        { en: "Trend analysis", pt: "Análise de tendências" },
-        { en: "Statistical analysis", pt: "Análise estatística" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Predictive Analytics uses AI and machine learning to analyze historical data and predict future customer behavior, preferences, and outcomes.",
-        pt: "Análise Preditiva usa IA e aprendizado de máquina para analisar dados históricos e prever comportamento, preferências e resultados futuros de clientes."
-      }
-    }
-  ],
-  'business-analyst': [
-    {
-      id: 'ba-1',
-      question: { en: "What is a key responsibility of a Salesforce Business Analyst?", pt: "Qual é uma responsabilidade chave de um Analista de Negócios Salesforce?" },
-      options: [
-        { en: "Gathering and documenting requirements", pt: "Coletar e documentar requisitos" },
-        { en: "Writing Apex code", pt: "Escrever código Apex" },
-        { en: "Managing servers", pt: "Gerenciar servidores" },
-        { en: "Designing databases", pt: "Projetar bancos de dados" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Business Analysts focus on understanding business needs, gathering requirements, and translating them into Salesforce solutions.",
-        pt: "Analistas de Negócios focam em entender necessidades de negócio, coletar requisitos e traduzi-los em soluções Salesforce."
-      }
-    },
-    {
-      id: 'ba-2',
-      question: { en: "What is a user story?", pt: "O que é uma história de usuário?" },
-      options: [
-        { en: "A description of a feature from the user's perspective", pt: "Uma descrição de um recurso da perspectiva do usuário" },
-        { en: "A user biography", pt: "Uma biografia de usuário" },
-        { en: "A case study", pt: "Um estudo de caso" },
-        { en: "A user manual", pt: "Um manual de usuário" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "User Stories describe features or requirements from the end user's perspective, typically following the format: 'As a [user], I want [goal] so that [benefit]'.",
-        pt: "Histórias de Usuário descrevem recursos ou requisitos da perspectiva do usuário final, tipicamente seguindo o formato: 'Como [usuário], eu quero [objetivo] para que [benefício]'."
-      }
-    },
-    {
-      id: 'ba-3',
-      question: { en: "What is a process map?", pt: "O que é um mapa de processo?" },
-      options: [
-        { en: "A visual representation of a business process", pt: "Uma representação visual de um processo de negócio" },
-        { en: "A geographical map", pt: "Um mapa geográfico" },
-        { en: "A project plan", pt: "Um plano de projeto" },
-        { en: "A data model", pt: "Um modelo de dados" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Process Maps visually represent business processes, showing steps, decision points, and flow, helping identify inefficiencies and improvement opportunities.",
-        pt: "Mapas de Processo representam visualmente processos de negócio, mostrando etapas, pontos de decisão e fluxo, ajudando a identificar ineficiências e oportunidades de melhoria."
-      }
-    },
-    {
-      id: 'ba-4',
-      question: { en: "What is gap analysis?", pt: "O que é análise de lacunas?" },
-      options: [
-        { en: "Identifying the difference between current and desired state", pt: "Identificar a diferença entre estado atual e desejado" },
-        { en: "Finding missing data", pt: "Encontrar dados faltantes" },
-        { en: "Analyzing gaps in reports", pt: "Analisar lacunas em relatórios" },
-        { en: "Identifying security gaps", pt: "Identificar lacunas de segurança" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Gap Analysis identifies the difference between the current state and desired future state, helping prioritize requirements and solutions.",
-        pt: "Análise de Lacunas identifica a diferença entre o estado atual e o estado futuro desejado, ajudando a priorizar requisitos e soluções."
-      }
-    },
-    {
-      id: 'ba-5',
-      question: { en: "What is stakeholder management?", pt: "O que é gerenciamento de partes interessadas?" },
-      options: [
-        { en: "Identifying and engaging with project stakeholders", pt: "Identificar e engajar com partes interessadas do projeto" },
-        { en: "Managing shareholders", pt: "Gerenciar acionistas" },
-        { en: "User management", pt: "Gerenciamento de usuários" },
-        { en: "Team management", pt: "Gerenciamento de equipe" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Stakeholder Management involves identifying, analyzing, and engaging with individuals or groups who have an interest in or influence on the project.",
-        pt: "Gerenciamento de Partes Interessadas envolve identificar, analisar e engajar com indivíduos ou grupos que têm interesse ou influência no projeto."
-      }
-    },
-    {
-      id: 'ba-6',
-      question: { en: "What is a requirements document?", pt: "O que é um documento de requisitos?" },
-      options: [
-        { en: "A formal document detailing project requirements", pt: "Um documento formal detalhando requisitos do projeto" },
-        { en: "A list of requirements", pt: "Uma lista de requisitos" },
-        { en: "A user manual", pt: "Um manual de usuário" },
-        { en: "A project plan", pt: "Um plano de projeto" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Requirements Documents formally detail functional and non-functional requirements, serving as a contract between stakeholders and the development team.",
-        pt: "Documentos de Requisitos detalham formalmente requisitos funcionais e não funcionais, servindo como um contrato entre partes interessadas e a equipe de desenvolvimento."
-      }
-    },
-    {
-      id: 'ba-7',
-      question: { en: "What is acceptance criteria?", pt: "O que é critério de aceitação?" },
-      options: [
-        { en: "Conditions that must be met for a feature to be accepted", pt: "Condições que devem ser atendidas para um recurso ser aceito" },
-        { en: "User acceptance", pt: "Aceitação do usuário" },
-        { en: "Quality standards", pt: "Padrões de qualidade" },
-        { en: "Testing criteria", pt: "Critérios de teste" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Acceptance Criteria define specific conditions that must be met for a feature or user story to be considered complete and accepted by stakeholders.",
-        pt: "Critérios de Aceitação definem condições específicas que devem ser atendidas para que um recurso ou história de usuário seja considerado completo e aceito pelas partes interessadas."
-      }
-    },
-    {
-      id: 'ba-8',
-      question: { en: "What is a use case?", pt: "O que é um caso de uso?" },
-      options: [
-        { en: "A detailed description of how users interact with a system", pt: "Uma descrição detalhada de como usuários interagem com um sistema" },
-        { en: "A test case", pt: "Um caso de teste" },
-        { en: "A business case", pt: "Um caso de negócio" },
-        { en: "An example", pt: "Um exemplo" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Use Cases provide detailed descriptions of how users interact with a system to achieve specific goals, including steps, actors, and outcomes.",
-        pt: "Casos de Uso fornecem descrições detalhadas de como usuários interagem com um sistema para alcançar objetivos específicos, incluindo etapas, atores e resultados."
-      }
-    },
-    {
-      id: 'ba-9',
-      question: { en: "What is data modeling?", pt: "O que é modelagem de dados?" },
-      options: [
-        { en: "Designing the structure of data and relationships", pt: "Projetar a estrutura de dados e relacionamentos" },
-        { en: "Creating data", pt: "Criar dados" },
-        { en: "Data analysis", pt: "Análise de dados" },
-        { en: "Data visualization", pt: "Visualização de dados" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Data Modeling involves designing the structure, relationships, and constraints of data to support business requirements and ensure data integrity.",
-        pt: "Modelagem de Dados envolve projetar a estrutura, relacionamentos e restrições de dados para apoiar requisitos de negócio e garantir integridade de dados."
-      }
-    },
-    {
-      id: 'ba-10',
-      question: { en: "What is change management?", pt: "O que é gerenciamento de mudanças?" },
-      options: [
-        { en: "Managing the people side of organizational change", pt: "Gerenciar o lado humano da mudança organizacional" },
-        { en: "Managing code changes", pt: "Gerenciar mudanças de código" },
-        { en: "Managing project changes", pt: "Gerenciar mudanças de projeto" },
-        { en: "Managing configuration changes", pt: "Gerenciar mudanças de configuração" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Change Management focuses on the people side of organizational change, ensuring users adopt new systems and processes successfully.",
-        pt: "Gerenciamento de Mudanças foca no lado humano da mudança organizacional, garantindo que usuários adotem novos sistemas e processos com sucesso."
-      }
-    },
-    {
-      id: 'ba-11',
-      question: { en: "What is a wireframe?", pt: "O que é um wireframe?" },
-      options: [
-        { en: "A visual blueprint of a user interface", pt: "Um blueprint visual de uma interface de usuário" },
-        { en: "A network diagram", pt: "Um diagrama de rede" },
-        { en: "A data model", pt: "Um modelo de dados" },
-        { en: "A process flow", pt: "Um fluxo de processo" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Wireframes are visual blueprints of user interfaces, showing layout, content placement, and functionality without detailed design elements.",
-        pt: "Wireframes são blueprints visuais de interfaces de usuário, mostrando layout, posicionamento de conteúdo e funcionalidade sem elementos de design detalhados."
-      }
-    },
-    {
-      id: 'ba-12',
-      question: { en: "What is user acceptance testing (UAT)?", pt: "O que é teste de aceitação do usuário (UAT)?" },
-      options: [
-        { en: "Testing by end users to validate the solution meets requirements", pt: "Teste por usuários finais para validar que a solução atende requisitos" },
-        { en: "Automated testing", pt: "Teste automatizado" },
-        { en: "Unit testing", pt: "Teste unitário" },
-        { en: "Performance testing", pt: "Teste de desempenho" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "User Acceptance Testing is performed by end users to validate that the solution meets business requirements and is ready for deployment.",
-        pt: "Teste de Aceitação do Usuário é realizado por usuários finais para validar que a solução atende requisitos de negócio e está pronta para implantação."
-      }
-    },
-    {
-      id: 'ba-13',
-      question: { en: "What is a business process?", pt: "O que é um processo de negócio?" },
-      options: [
-        { en: "A series of steps to achieve a business objective", pt: "Uma série de etapas para alcançar um objetivo de negócio" },
-        { en: "A business plan", pt: "Um plano de negócios" },
-        { en: "A workflow", pt: "Um fluxo de trabalho" },
-        { en: "A procedure", pt: "Um procedimento" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Business Processes are series of steps or activities performed to achieve specific business objectives, involving people, systems, and data.",
-        pt: "Processos de Negócio são séries de etapas ou atividades realizadas para alcançar objetivos específicos de negócio, envolvendo pessoas, sistemas e dados."
-      }
-    },
-    {
-      id: 'ba-14',
-      question: { en: "What is requirements prioritization?", pt: "O que é priorização de requisitos?" },
-      options: [
-        { en: "Ranking requirements by importance and urgency", pt: "Classificar requisitos por importância e urgência" },
-        { en: "Listing requirements", pt: "Listar requisitos" },
-        { en: "Organizing requirements", pt: "Organizar requisitos" },
-        { en: "Documenting requirements", pt: "Documentar requisitos" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Requirements Prioritization ranks requirements by importance, urgency, and business value to help teams focus on delivering the most critical features first.",
-        pt: "Priorização de Requisitos classifica requisitos por importância, urgência e valor de negócio para ajudar equipes a focar em entregar os recursos mais críticos primeiro."
-      }
-    },
-    {
-      id: 'ba-15',
-      question: { en: "What is a business case?", pt: "O que é um caso de negócio?" },
-      options: [
-        { en: "A justification for a project based on costs and benefits", pt: "Uma justificativa para um projeto baseada em custos e benefícios" },
-        { en: "A use case", pt: "Um caso de uso" },
-        { en: "A test case", pt: "Um caso de teste" },
-        { en: "A case study", pt: "Um estudo de caso" }
-      ],
-      correct: 0,
-      explanation: { 
-        en: "Business Cases provide justification for projects by analyzing costs, benefits, risks, and return on investment to support decision-making.",
-        pt: "Casos de Negócio fornecem justificativa para projetos analisando custos, benefícios, riscos e retorno sobre investimento para apoiar tomada de decisão."
+        en: "Email Studio is a tool that allows you to create and send email campaigns. It includes a drag-and-drop editor, a library of templates, and a number of features that help you to personalize your emails and track their performance. By using Email Studio, you can create professional-looking email campaigns that get results.",
+        pt: "O Email Studio é uma ferramenta que permite criar e enviar campanhas de e-mail. Ele inclui um editor de arrastar e soltar, uma biblioteca de modelos e vários recursos que ajudam a personalizar seus e-mails e acompanhar seu desempenho. Ao usar o Email Studio, você pode criar campanhas de e-mail com aparência profissional que geram resultados."
       }
     }
   ]
 };
-
-
