@@ -1815,9 +1815,7 @@ export const offlineQuestions = {
         pt: "Casos de Negócio fornecem justificativa para projetos analisando custos, benefícios, riscos e retorno sobre investimento para apoiar tomada de decisão."
       }
     }
-  ]
-};
-
+  ],
 
   'service-cloud': [
     {
