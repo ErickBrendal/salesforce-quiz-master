@@ -1,4 +1,3 @@
-'''
 import { useState } from 'react';
 import { Zap, CheckCircle, XCircle, Star, Rocket, Target, Award, Globe, BookOpen, Heart, Home, Trophy } from 'lucide-react';
 import './App.css';
@@ -495,4 +494,3 @@ const SalesforceQuizApp = () => {
 };
 
 export default SalesforceQuizApp;
-'''

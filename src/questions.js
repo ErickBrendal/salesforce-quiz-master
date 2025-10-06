@@ -29,7 +29,8 @@ export const offlineQuestions = {
         en: "Many-to-Many relationships are crucial for complex data models, enabling flexible connections between records. They are implemented using a junction object, which is a custom object with two Master-Detail relationships to the parent objects. This setup allows a record from one object to be linked to multiple records from another, and vice-versa, providing robust data association.",
         pt: "Relacionamentos Muitos-para-Muitos são cruciais para modelos de dados complexos, permitindo conexões flexíveis entre registros. Eles são implementados usando um objeto de junção, que é um objeto personalizado com dois relacionamentos Mestre-Detalhe para os objetos pai. Essa configuração permite que um registro de um objeto seja vinculado a múltiplos registros de outro, e vice-versa, proporcionando uma associação de dados robusta."
       }
-    },\n    {
+    },
+    {
       id: 'pf-3',
       question: { en: "Which field type stores up to 131,072 characters?", pt: "Qual tipo de campo armazena até 131.072 caracteres?" },
       options: [
