@@ -1,0 +1,28 @@
+{
+  "name": "Salesforce Quiz Master - Trailblazer Certification Quiz",
+  "short_name": "SF Quiz Master",
+  "description": "Master Salesforce certifications with interactive quizzes. Practice for Platform Foundations, Admin, Sales Cloud, Marketing Cloud, Agentforce, Data Cloud, and Business Analyst certifications.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0B1F3A",
+  "theme_color": "#00A1E0",
+  "categories": ["education", "productivity", "business"],
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192 512x512 any",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512 any",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
+
